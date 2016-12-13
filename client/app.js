@@ -10,10 +10,15 @@ app.config(function($stateProvider, $urlRouterProvider) {
               controller: "MainCtrl"
           }
       }
-  }).state('app.home', {
+  })
+  .state('app.home', {
       templateUrl: "/modules/home/views/home.html",
       controller: "HomeCtrl",
       url: "/home"
+  })
+  .state('app.contact', {
+      templateUrl: "/modules/contact/views/contact.html",
+      url: "/contact"
   });
 
   $urlRouterProvider.otherwise('/home');
