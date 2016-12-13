@@ -17,7 +17,11 @@ var source = {
         src: [
             // application config
             'app.js',
-            'main.js'
+
+            // main controller
+            'layout/main.js',
+
+            'modules/**/*.js'
         ],
         // tpl: 'app/**/*.tpl.html'
     }

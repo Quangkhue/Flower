@@ -19,12 +19,13 @@
   "dependencies": {
     "angular": "^1.6.0",
     "angular-ui-router": "^0.3.2",
+    "compression": "^1.6.2",
     "event-stream": "^3.3.4",
     "express": "^4.14.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-ng-annotate": "^2.0.0",
     "gulp-uglify": "^2.0.0",
-    "compression": "^1.6.2"
+    "mongoose": "^4.7.2"
   }
 }

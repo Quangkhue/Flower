@@ -1,0 +1,24 @@
+{
+  "name": "Flower",
+  "homepage": "https://github.com/Quangkhue/Flower",
+  "authors": [
+    "Quangkhue"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.0",
+    "angular-ui-router": "^0.3.2",
+    "gulp": "^3.9.1"
+  }
+}

@@ -1,0 +1,66 @@
+<div ng-init="init()">
+    <section class="slider">
+      <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item" ng-repeat="item in sliderImgs" ng-class="{'active': $index == 0}">
+                <img alt="First slide" ng-src="{{item.src}}">
+                <div class="container">
+                  <div class="carousel-caption">
+                    <h1>{{item.title}}</h1>
+                    <p>{{item.description}}</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control bg-transparent" href="#myCarousel" data-slide="prev"><span class="glyphicon carousel-control-left"></span></a> <a class="right carousel-control bg-transparent" href="#myCarousel" data-slide="next"><span class="glyphicon carousel-control-right"></span></a> </div>
+    </section>
+    <!--end of slider section-->
+    <section class="main__middle__container">
+      <div class="container">
+        <div class="row text-center">
+          <h2 class="">create your outstanding, <span class="blue">clean</span> and <span class="blue">high quality</span> website.</h2>
+          <p class="big-paragraph">Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+        </div>
+      </div>
+      <div class="row no_padding icons__blocks text-center">
+        <div class="container">
+          <h2 class="page_title"><span>our services</span><br />
+            <span class="sep"></span><br />
+            <small>Cras ornare tristique elit</small></h2>
+          <div class="col-md-4"> <img src="images/content__images/image_300x190.jpg" alt="image" class="img-responsive img-rounded">
+            <h3><a href="#">Creative Design</a></h3>
+            <p class="small-paragraph">Vestibulum auctor dapibus neque.</p>
+            <p>Quisque et aliquam mauris. Nunc id cursus quam. Curabitur aliquam ornare ante et commodo. Nulla eu erat id massa egestas eleifend. Sed id venenatis.</p>
+            <p><a href="#" class="btn btn-info">Learn more</a></p>
+          </div>
+          <div class="col-md-4"> <img src="images/content__images/image_300x190.jpg" alt="image" class="img-responsive img-rounded">
+            <h3><a href="#">Creative Design</a></h3>
+            <p class="small-paragraph">Vestibulum auctor dapibus neque.</p>
+            <p>Quisque et aliquam mauris. Nunc id cursus quam. Curabitur aliquam ornare ante et commodo. Nulla eu erat id massa egestas eleifend. Sed id venenatis.</p>
+            <p><a href="#" class="btn btn-info">Learn more</a></p>
+          </div>
+          <div class="col-md-4"> <img src="images/content__images/image_300x190.jpg" alt="image" class="img-responsive img-rounded">
+            <h3><a href="#">Creative Design</a></h3>
+            <p class="small-paragraph">Vestibulum auctor dapibus neque.</p>
+            <p>Quisque et aliquam mauris. Nunc id cursus quam. Curabitur aliquam ornare ante et commodo. Nulla eu erat id massa egestas eleifend. Sed id venenatis.</p>
+            <p><a href="#" class="btn btn-info">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center three-blocks">
+        <div class="container">
+          <div class="row">
+            <h2 class="">Phasellus ultrices nulla quis nibh. <span class="blue">Quisque a lectus.</span> Donec consectetuer ligula vulputate sem ...</h2>
+            <p class="">Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+</div>
+<script type="text/javascript">
+$('.carousel').carousel({
+  interval: 3500, // in milliseconds
+  pause: 'none' // set to 'true' to pause slider on mouse hover
+})
+
+</script>

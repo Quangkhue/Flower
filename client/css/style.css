@@ -1206,3 +1206,7 @@ h2.page_title {
 	padding: 0;
 	width: 100%
 }
+
+.bg-transparent {
+	background: transparent !important;
+}

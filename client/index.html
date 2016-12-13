@@ -4,7 +4,7 @@
 <title>Reponsive HTML Template</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- Bootstrap -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -15,7 +15,7 @@
     <![endif]-->
 </head>
 <body ng-app="Flower">
-    <div ui-view ng-controller="MainCtrl"></div>
+    <div ui-view name="root"></div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script type="text/javascript" src="build/vendor.js"></script>
 <script type="text/javascript" src="build/vendor.ui.js"></script>
