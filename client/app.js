@@ -19,6 +19,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
   .state('app.contact', {
       templateUrl: "/modules/contact/views/contact.html",
       url: "/contact"
+  })
+  .state('app.about', {
+      templateUrl: "/modules/about/views/about.html",
+      url: "/about"
   });
 
   $urlRouterProvider.otherwise('/home');

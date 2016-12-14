@@ -5,13 +5,13 @@ app.controller("HomeCtrl", function($scope, $rootScope){
         $scope.sliderImgs = [
             {
                 src: "/images/flowers/slider2.jpg",
-                title: "Hoa tươi Đà Lạt.",
-                description: "Tellus sit amet massa condimentum, vitae tincidunt lectus imperdiet. Nunc consectetur risus justo."
+                title: "Hoa Tươi Đà Lạt.",
+                description: "Chuyên cung cấp hoa tươi giá sỉ Uy Tín - Chất Lượng - Miễn Phí Giao Hàng Toàn Quốc"
             },
             {
                 src: "/images/flowers/slider3.jpg",
-                title: "Hoa tươi Đà Lạt.",
-                description: "Tellus sit amet massa condimentum, vitae tincidunt lectus imperdiet. Nunc consectetur risus justo."
+                title: "Hoa Tươi Đà Lạt.",
+                description: "Chuyên cung cấp hoa tươi giá sỉ Uy Tín - Chất Lượng - Miễn Phí Giao Hàng Toàn Quốc"
             }
         ];
     }
