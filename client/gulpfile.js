@@ -25,7 +25,7 @@ var source = {
             'factories/*.js',
 
             // services
-            'services/*.js'
+            'services/*.js',
 
             // main controller
             'layout/main.js',
