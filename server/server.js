@@ -1,13 +1,28 @@
 var express = require('express')
+var bodyParser = require('body-parser')
 var path = require('path')
 var compression = require('compression')
+var mongoose = require('mongoose')
+var products = require('./routes/product')
+
+// Use native Node promises
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/Flower')
+  .then(() =>  console.log('connection succesful'))
+  .catch((err) => console.error(err));
 
 var app = express()
 
 app.use(compression())
 
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+
 // serve our static stuff like index.css
 app.use('/', express.static(path.join(__dirname, '../client')))
+
+// routes
+app.use('/products', products)
 
 app.get('/', function (req, res) {
     console.log("Main page!");
