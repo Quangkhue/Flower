@@ -16,7 +16,16 @@ var source = {
         main: 'app/main.js',
         src: [
             // application config
+            'app.configs.js',
             'app.js',
+
+            // Connection
+            'connection/*.js',
+            // factories
+            'factories/*.js',
+
+            // services
+            'services/*.js'
 
             // main controller
             'layout/main.js',
