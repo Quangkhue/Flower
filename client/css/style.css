@@ -1210,3 +1210,7 @@ h2.page_title {
 .bg-transparent {
 	background: transparent !important;
 }
+
+.content-wraper {
+	padding-top: 100px;
+}
