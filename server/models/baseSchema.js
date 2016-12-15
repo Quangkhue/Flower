@@ -24,14 +24,9 @@ var BaseSchema = function() {
         next();
     });
 
-    schema.pre('save', function setUpdatedAt(next){
-        if(this._id){
-            this.updatedAt = Date.now();
-        }
-
-        next();
+    schema.pre('update', function setUpdatedAt(){
+        this.update({},{ $set: { updatedAt: new Date() } });
     });
-
 
     return schema;
 }

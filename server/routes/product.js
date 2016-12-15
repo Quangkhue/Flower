@@ -20,18 +20,22 @@ router.post('/', function(req, res, next) {
 
 router.put('/', function(req, res, next){
     var data = req.body.data;
-    Product.findById(data._id, function(err, p){
+    // Product.findById(data._id, function(err, p){
+    //     if(err) return next(err);
+    //     if(!p){
+    //         return res.json("Not found!");
+    //     }
+    //     p.name = data.name;
+    //     p.catIds = data.catIds;
+    //
+    //     p.save(function(err, updatedProduct){
+    //         if(err) return next(err);
+    //         res.json(updatedProduct);
+    //     })
+    // })
+    Product.update({_id: data._id}, {$set: data}, function(err, p){
         if(err) return next(err);
-        if(!p){
-            return res.json("Not found!");
-        }
-        p.name = data.name;
-        p.catIds = data.catIds;
-
-        p.save(function(err, updatedProduct){
-            if(err) return next(err);
-            res.json(updatedProduct);
-        })
+        res.json(p);
     })
 });
 
