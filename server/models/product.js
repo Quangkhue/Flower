@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var BaseSchema = require('./baseSchema')
-var schema = BaseSchema();
 
+var schema = BaseSchema();
 schema.add({
     name: String,
     imgUrls: [String],
