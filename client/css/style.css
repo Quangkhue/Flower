@@ -1214,3 +1214,16 @@ h2.page_title {
 .content-wraper {
 	padding-top: 100px;
 }
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	color: #23c3ff;
+	background-color: transparent;
+}
+
+.no-padding {
+	padding: 0px;
+}
+
+.no-margin {
+	margin: 0px;
+}

@@ -6,7 +6,11 @@
         "angular-ui-router"
     ],
     "vendor.ui": [
-        "boostrap"
+        "bootstrap",
+        "angular-animate",
+        "angular-sanitize",
+        "angular-bootstrap-tpl",
+        "angular-bootstrap"
     ],
     "vendor.datatables": [
 
@@ -17,7 +21,11 @@
   },
   "paths": {
     "jquery": "bower_components/jquery/dist/jquery.min.js",
-    "boostrap": "bower_components/bootstrap/dist/js/bootstrap.min.js",
+    "bootstrap": "bower_components/bootstrap/dist/js/bootstrap.min.js",
+    "angular-bootstrap-tpl": "bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js",
+    "angular-bootstrap": "bower_components/angular-bootstrap/ui-bootstrap.min.js",
+    "angular-animate": "bower_components/angular-animate/angular-animate.min.js",
+    "angular-sanitize": "bower_components/angular-sanitize/angular-sanitize.min.js",
     "angular": "bower_components/angular/angular.min.js",
     "angular-ui-router": "bower_components/angular-ui-router/release/angular-ui-router.min.js"
   }

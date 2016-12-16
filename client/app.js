@@ -1,5 +1,5 @@
 'use strict';
-var app = angular.module("Flower", ['ui.router']);
+var app = angular.module("Flower", ['ngAnimate', 'ngSanitize', 'ui.bootstrap', 'ui.router']);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state('app', {
@@ -12,13 +12,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         }
     })
         .state('app.home', {
-            views: {
-                'contents': {
-                    templateUrl: "/modules/home/views/home.html",
-                    controller: "HomeCtrl",
-                },
-                 'sidebars': {}
-            },
+            templateUrl: "/modules/home/views/home.html",
+            controller: "HomeCtrl",
             url: "/home"
         })
         .state('app.contact', {
