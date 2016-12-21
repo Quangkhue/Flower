@@ -9,4 +9,10 @@ schema.add({
     catIds: [String]
 });
 
-module.exports = mongoose.model("product", schema);
+var Product = mongoose.model("product", schema);
+
+Product.getProductsByCatIds = function(catIds){
+    return Product.find({catIds: {$in: catIds}}).exec();
+}
+
+module.exports = Product;

@@ -3,7 +3,8 @@ var bodyParser = require('body-parser')
 var path = require('path')
 var compression = require('compression')
 var mongoose = require('mongoose')
-var products = require('./routes/product')
+var productCtrl = require('./routes/product')
+var categoryCtrl = require('./routes/category')
 
 // Use native Node promises
 mongoose.Promise = global.Promise;
@@ -22,7 +23,8 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 app.use('/', express.static(path.join(__dirname, '../client')))
 
 // routes
-app.use('/products', products)
+app.use('/products', productCtrl)
+app.use('/categories', categoryCtrl)
 
 app.get('/', function (req, res) {
     console.log("Main page!");

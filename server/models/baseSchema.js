@@ -11,16 +11,25 @@ var BaseSchema = function() {
             type: Date,
             default: Date.now()
         },
+        isDeleted: {
+            type: Boolean,
+            default: false
+        },
         id: String
     });
 
-    schema.pre('save', function setId(next){
-        if(!this._id){
-            var id =  mongoose.Types.ObjectId();
-            this._id = id;
-            this.id = id.toString();
-        }
+    schema.options.toJSON = {
+      transform: function(doc, ret) {
+            ret.id = ret._id;
+            delete ret._id;
+            delete ret.__v;
+          }
+    };
 
+    schema.pre('save', function setId(next){
+        if(this.isNew){
+            this.id = this._id.toString();
+        }
         next();
     });
 
