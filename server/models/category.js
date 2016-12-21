@@ -6,4 +6,5 @@ schema.add({
     name: String
 });
 
-module.exports = mongoose.model("category", schema);
+var Category = mongoose.model("category", schema);
+module.exports = Category;
