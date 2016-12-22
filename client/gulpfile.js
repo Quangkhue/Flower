@@ -16,7 +16,7 @@ var source = {
         main: 'app/main.js',
         src: [
             // application config
-            'app.configs.js',
+            'constant/*.js',
             'app.js',
 
             // Connection
