@@ -1,7 +1,7 @@
 'use strict';
 var host = "http://localhost:8080/v1/"
 var API_URL = {
-    PRODUDCT: {
+    PRODUCT: {
         LIST: host + "products"
     },
     CATEGORY: {
