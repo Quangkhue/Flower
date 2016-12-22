@@ -1,5 +1,5 @@
 
-app.controller("HomeCtrl", function($scope, $rootScope, ProductSvc, CategorySvc){
+app.controller("HomeCtrl", function($scope, $rootScope, ProductSvc, CategorySvc, $state){
     console.log("Home Ctrl");
 
     $scope.init = function(){

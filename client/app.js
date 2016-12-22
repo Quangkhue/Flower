@@ -23,6 +23,10 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         .state('app.about', {
             templateUrl: "/modules/about/views/about.html",
             url: "/about"
+        })
+        .state('app.product', {
+            templateUrl: "/modules/product/views/list_Product.html",
+            url: "/product"
         });
 
     $urlRouterProvider.otherwise('/home');
