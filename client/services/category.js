@@ -1,8 +1,24 @@
 'use strict';
 
-app.service("CategorySvc", function($rootScope, Category, ConnectionSvc){
+app.service("CategorySvc", function($rootScope, Category, ConnectionSvc, $q){
     this.getCategories = function(){
-        return ConnectionSvc.get(API_URL.CATEGORY.LIST);
+        var result = [];
+        var dfd = $q.defer();
+        ConnectionSvc.get(API_URL.CATEGORY.LIST).then(function(res){
+            console.log("api result: ", res)
+            angular.forEach(res, function(cat){
+                var c = new Category();
+                console.log("tada: ", c);
+                c.parse(cat);
+                result.push(c);
+            })
+
+            dfd.resolve(result);
+        }, function(error){
+            dfd.reject(error);
+        })
+
+        return dfd.promise;
     };
 
     this.create = function(cat){
@@ -16,4 +32,8 @@ app.service("CategorySvc", function($rootScope, Category, ConnectionSvc){
     this.getById = function(id){
         return ConnectionSvc.get(API_URL.CATEGORY.DETAIL + id);
     };
+
+    this.delete = function(id){
+        return ConnectionSvc.delete(API_URL.CATEGORY.DELETE + id);
+    }
 });

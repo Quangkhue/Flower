@@ -39,7 +39,7 @@ router.put('/:id', function(req, res, next){
 
 router.delete('/:id', function(req, res, next){
     var id = req.params.id;
-    Category.findById(id).exec().then(function(cat){
+    Category.findById(mongoose.Types.ObjectId(id)).exec().then(function(cat){
         cat.isDeleted = true;
         cat.save().then(function(result){
             APIResHandler.successHandler(res, {ok: 1, nDeleted: 1});

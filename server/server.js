@@ -29,6 +29,11 @@ app.use('/v1/categories', categoryCtrl)
 app.get('/', function (req, res) {
     console.log("Main page!");
     res.sendFile(path.join(__dirname, '../client/index.html'))
+});
+
+app.get('/admin', function (req, res) {
+    console.log("Main page!");
+    res.sendFile(path.join(__dirname, '../client/admin.html'))
 })
 
 var PORT = process.env.PORT || 8080

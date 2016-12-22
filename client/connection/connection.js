@@ -31,8 +31,14 @@ app.service("ConnectionSvc", function($q, $http){
         return dfd.promise;
     };
 
-    this.delete = function(url, id){
-
+    this.delete = function(url){
+        var dfd = $q.defer();
+        $http.delete(url).then(function(res){
+            dfd.resolve(successHandler(res));
+        }, function(error){
+            dfd.reject(errorHanlder(error));
+        })
+        return dfd.promise;
     };
 
     var errorHanlder = this.errorHandler = function(error){
