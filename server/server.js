@@ -23,8 +23,8 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 app.use('/', express.static(path.join(__dirname, '../client')))
 
 // routes
-app.use('/products', productCtrl)
-app.use('/categories', categoryCtrl)
+app.use('/v1/products', productCtrl)
+app.use('/v1/categories', categoryCtrl)
 
 app.get('/', function (req, res) {
     console.log("Main page!");
