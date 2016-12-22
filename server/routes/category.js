@@ -13,7 +13,7 @@ router.get('/', function(req, res, next){
 })
 
 router.get('/:id', function(req, res, next){
-    Category.findById(req.params.id).exec().then(function(result){
+    Category.findById(mongoose.Types.ObjectId(req.params.id)).exec().then(function(result){
         APIResHandler.successHandler(res, result);
     }, function(error){
         APIResHandler.errorHandler(res, error);

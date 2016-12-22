@@ -2,6 +2,6 @@
 
 app.service("ProductSvc", function($rootScope, Product, ConnectionSvc){
     this.getProducts = function(){
-        return [];
+        return ConnectionSvc.get(API_URL.PRODUCT.LIST);
     }
 });

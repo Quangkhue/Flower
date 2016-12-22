@@ -5,4 +5,8 @@ app.controller('MainCtrl', function($scope, $rootScope, $state){
 
     $scope.$state = $state;
     $rootScope.notShowSideBar = ["app.home", "app.contact"];
+
+    $scope.goToPage = function(stateName, params){
+        $state.go(stateName, params);
+    }
 });
