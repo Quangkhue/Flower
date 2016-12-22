@@ -1,4 +1,4 @@
-app.controller("HomeCtrl", function($scope, $rootScope){
+app.controller("HomeCtrl", function($scope, $rootScope, $state){
     console.log("Home Ctrl");
 
     $scope.init = function(){
@@ -14,5 +14,9 @@ app.controller("HomeCtrl", function($scope, $rootScope){
                 description: "Chuyên cung cấp hoa tươi giá sỉ Uy Tín - Chất Lượng - Miễn Phí Giao Hàng Toàn Quốc"
             }
         ];
+    }
+    $scope.viewDetail = function(){
+        console.log("dsadsada");
+        $state.go("app.contact");
     }
 });

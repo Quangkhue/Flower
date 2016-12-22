@@ -6,7 +6,7 @@
       <div class="navbar-header">
         <div class="navbar-brand logo">
           <img src="/images/images_logo.jpg" style="height :100%;">
-        </div>
+          </div>
         <!--<h1 class="navbar-brand"><a href="index.html" style="background-image: url('/images/images_logo.jpg');"></a></h1>-->
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       </div>
@@ -28,35 +28,49 @@
           <li ng-class="{'active': $state.current.name == 'app.contact'}"><a ui-sref="app.contact">Liên Hệ</a></li>
         </ul>
       </div>
+      <!--<div class="navbar-right">
+        <p>
+          <iframe src="http://www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/facebook&width=250&height=258&colorscheme=light&show_faces=true&border_color&stream=false&header=false"
+            scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:270px;" allowTransparency="true"></iframe>
+        </p>
+        <div class="clr"></div>
+      </div>-->
     </nav>
   </div>
 </header>
 
 <section class="main_section_container content-wraper">
-    <div ng-class="{'container': $state.current.name != 'app.home'}">
-        <div class="row nothing" ng-class="{'no-padding no-margin' : notShowSideBar.indexOf($state.current.name) >= 0}">
-            <section ui-view class="main-content col" ng-class="{'col-sm-8': notShowSideBar.indexOf($state.current.name) < 0}"></section>
-            <aside class="col-sm-4" ng-if="notShowSideBar.indexOf($state.current.name) < 0">
-                <h3><span>Subheading</span></h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
-                <img src="images/content__images/image_300x130.jpg" alt="image">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam
-                    malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-                <p><a href="#" role="button" class="btn btn-primary">Learn more</a></p>
-                <h3><span>Subheading</span></h3>
-                <ul>
-                    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                    <li><a href="#">Donec odio.</a></li>
-                    <li><a href="#">Quisque volutpat mattis eros.</a></li>
-                    <li><a href="#">Nullam malesuada erat ut turpis.</a></li>
-                    <li><a href="#">Suspendisse urna nibh, viverra non</a></li>
-                    <li><a href="#">Donec nec justo eget felis facilisis fermentum.</a></li>
-                    <li><a href="#">Aliquam porttitor mauris sit amet orci.</a></li>
-                    <li><a href="#">Aenean dignissim pellentesque felis.</a></li>
-                </ul>
-            </aside>
+  <div ng-class="{'container': $state.current.name != 'app.home'}">
+    <div class="row nothing" ng-class="{'no-padding no-margin' : notShowSideBar.indexOf($state.current.name) >= 0}">
+      <section ui-view class="main-content col" ng-class="{'col-sm-8': notShowSideBar.indexOf($state.current.name) < 0}"></section>
+      <aside class="col-sm-4" ng-if="notShowSideBar.indexOf($state.current.name) < 0">
+        <div>
+        <p>
+          <iframe src="http://www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/facebook&width=250&height=258&colorscheme=light&show_faces=true&border_color&stream=false&header=false"
+            scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:270px;" allowTransparency="true"></iframe>
+        </p>
+        <!--<div class="clr"></div>-->
         </div>
+        <h3><span>Subheading</span></h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+        <img src="images/content__images/image_300x130.jpg" alt="image">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada
+          erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+        <p><a href="#" role="button" class="btn btn-primary">Learn more</a></p>
+        <h3><span>Subheading</span></h3>
+        <ul>
+          <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+          <li><a href="#">Donec odio.</a></li>
+          <li><a href="#">Quisque volutpat mattis eros.</a></li>
+          <li><a href="#">Nullam malesuada erat ut turpis.</a></li>
+          <li><a href="#">Suspendisse urna nibh, viverra non</a></li>
+          <li><a href="#">Donec nec justo eget felis facilisis fermentum.</a></li>
+          <li><a href="#">Aliquam porttitor mauris sit amet orci.</a></li>
+          <li><a href="#">Aenean dignissim pellentesque felis.</a></li>
+        </ul>
+      </aside>
     </div>
+  </div>
 </section>
 
 <footer>
