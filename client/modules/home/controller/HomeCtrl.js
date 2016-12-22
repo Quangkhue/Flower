@@ -17,7 +17,6 @@ app.controller("HomeCtrl", function($scope, $rootScope, ProductSvc, CategorySvc,
         ];
     }
     $scope.viewDetail = function(){
-        console.log("dsadsada");
-        $state.go("app.contact");
+        $scope.goToPage("app.contact");
     }
 });

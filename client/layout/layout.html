@@ -42,7 +42,7 @@
 <section class="main_section_container content-wraper">
   <div ng-class="{'container': $state.current.name != 'app.home'}">
     <div class="row nothing" ng-class="{'no-padding no-margin' : notShowSideBar.indexOf($state.current.name) >= 0}">
-      <section ui-view class="main-content col" ng-class="{'col-sm-8': notShowSideBar.indexOf($state.current.name) < 0}"></section>
+      <section ui-view class="main-content col" autoscroll="true" ng-class="{'col-sm-8': notShowSideBar.indexOf($state.current.name) < 0}"></section>
       <aside class="col-sm-4" ng-if="notShowSideBar.indexOf($state.current.name) < 0">
         <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FHoa-t%25C6%25B0%25C6%25A1i-gi%25C3%25A1-s%25E1%25BB%2589-554722921369126%2F%3Ffref%3Dts&tabs=timeline&width=350&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
           width="350" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
