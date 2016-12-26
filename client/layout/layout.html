@@ -48,7 +48,7 @@
         <a href="#" class="btn btn-info">Breadcrumbs</a>
         <a href="#" class="btn btn-info">Info</a>
       </div>
-      <section ui-view class="main-content col" autoscroll="true" ng-class="{'col-sm-8': notShowSideBar.indexOf($state.current.name) < 0}">
+      <section ui-view class="main-content col" ng-class="{'col-sm-8': notShowSideBar.indexOf($state.current.name) < 0}">
       </section>
       <aside class="col-sm-4" ng-if="notShowSideBar.indexOf($state.current.name) < 0">
         <h3><span>Facebook</span></h3>
