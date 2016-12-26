@@ -1,12 +1,13 @@
 var mongoose = require('mongoose');
-var BaseSchema = require('./baseSchema')
+var BaseSchema = require('./baseSchema');
+var Schema = mongoose.Schema;
 
 var schema = BaseSchema();
 schema.add({
     name: String,
     imgUrls: [String],
     description: String,
-    catIds: [String]
+    cats: [{ type: Schema.Types.ObjectId, ref: 'category' }]
 });
 
 var Product = mongoose.model("product", schema);
