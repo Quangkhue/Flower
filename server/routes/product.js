@@ -6,7 +6,7 @@ var APIResHandler = require('./apiResponseHandler')
 /* GET /todos listing. */
 router.get('/', function(req, res, next) {
     var query = req.param('query')
-    Product.find({isDeleted: {$ne: true}}).exec().then(function(result) {
+    Product.find({isDeleted: {$ne: true}}).populate('cats').exec().then(function(result) {
         APIResHandler.successHandler(res, result);
     }, function(error){
         APIResHandler.errorHandler(res, error);
