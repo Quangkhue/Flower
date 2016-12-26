@@ -13,7 +13,7 @@
 <div class="navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
   <ul class="nav navbar-nav">
     <li ng-class="{'active': $state.current.name == 'app.home'}"><a ui-sref="app.home">Trang Chủ</a></li>
-    <li><a ui-sref="app.about">Giới Thiệu</a></li>
+    <li ng-class="{'active': $state.current.name == 'app.about'}"><a ui-sref="app.about">Giới Thiệu</a></li>
     <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sản Phẩm</a>
       <ul class="dropdown-menu">
         <li><a ui-sref="app.product">Hoa Cúc</a></li>
@@ -24,7 +24,7 @@
         <li><a href="">Hoa Cẩm Tú Cầu</a></li>
       </ul>
     </li>
-    <li><a ui-sref="">Hướng Dẫn Đặt Hoa </a></li>
+    <li ng-class="{'active': $state.current.name == 'app.guide'}"><a ui-sref="app.guide">Hướng Dẫn Đặt Hoa </a></li>
     <li ng-class="{'active': $state.current.name == 'app.contact'}"><a ui-sref="app.contact">Liên Hệ</a></li>
   </ul>
 </div>
@@ -42,8 +42,16 @@
 <section class="main_section_container content-wraper">
   <div ng-class="{'container': $state.current.name != 'app.home'}">
     <div class="row nothing" ng-class="{'no-padding no-margin' : notShowSideBar.indexOf($state.current.name) >= 0}">
-      <section ui-view class="main-content col" autoscroll="true" ng-class="{'col-sm-8': notShowSideBar.indexOf($state.current.name) < 0}"></section>
+      <div class="btn-group btn-breadcrumb" ng-if="notShowSideBar.indexOf($state.current.name) < 0">
+        <a href="#" class="btn btn-info"><i class="glyphicon glyphicon-home"></i></a>
+        <a href="#" class="btn btn-info">Snippets</a>
+        <a href="#" class="btn btn-info">Breadcrumbs</a>
+        <a href="#" class="btn btn-info">Info</a>
+      </div>
+      <section ui-view class="main-content col" autoscroll="true" ng-class="{'col-sm-8': notShowSideBar.indexOf($state.current.name) < 0}">
+      </section>
       <aside class="col-sm-4" ng-if="notShowSideBar.indexOf($state.current.name) < 0">
+        <h3><span>Facebook</span></h3>
         <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FHoa-t%25C6%25B0%25C6%25A1i-gi%25C3%25A1-s%25E1%25BB%2589-554722921369126%2F%3Ffref%3Dts&tabs=timeline&width=350&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
           width="350" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 <h3><span>Subheading</span></h3>
