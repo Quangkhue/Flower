@@ -8,6 +8,7 @@ var API_URL = {
         LIST: host + "categories",
         NEW: host + "categories",
         UPDATE: host + "categories/",
-        DETAIL: host + "categories/"
+        DETAIL: host + "categories/",
+        DELETE: host + "categories/"
     }
 }

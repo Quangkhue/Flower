@@ -32,6 +32,23 @@ var source = {
 
             'modules/**/*.js'
         ],
+        admin: [
+            'constant/*.js',
+            'admin.js',
+
+            // Connection
+            'connection/*.js',
+            // factories
+            'factories/*.js',
+
+            // services
+            'services/*.js',
+
+            // main controller
+            'admin/layout/main.js',
+
+            'admin/!(layout)*/**/*.js'
+        ]
         // tpl: 'app/**/*.tpl.html'
     }
 };
@@ -74,6 +91,17 @@ gulp.task('watch', function(){
     // gulp.watch(source.js.tpl, ['js']);
 });
 
+gulp.task('admin-js', function(){
+    return es.merge(gulp.src(source.js.admin))
+        .pipe(concat('admin.js'))
+        .pipe(gulp.dest(destinations.js));
+});
+
+gulp.task('admin-watch', function(){
+    gulp.watch(source.js.admin, ['admin-js']);
+    // gulp.watch(source.js.tpl, ['js']);
+});
+
 // gulp.task('connect', function() {
 //     connect.server({
 //         port: 8001
@@ -103,6 +131,7 @@ gulp.task('vendor', function(){
 gulp.task('prod', ['vendor', 'build']);
 // gulp.task('dev', ['vendor', 'js', 'watch', 'connect']);
 gulp.task('dev', ['vendor', 'js', 'watch']);
+gulp.task('admin', ['vendor', 'admin-js', 'admin-watch']);
 gulp.task('default', ['dev']);
 
 var swallowError = function(error){

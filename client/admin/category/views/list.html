@@ -1,0 +1,31 @@
+<div ng-init="init()">
+    <div class="row">
+        <div class="col col-sm-9">
+            <h3 class="page-title">Categories</h3>
+        </div>
+        <div class="col col-sm-3 text-right">
+            <button class="btn btn-primary" ng-click="addNew()">Add</button>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table table-bordered">
+            <thead>
+                <th>Name</th>
+                <th width="150">Action</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="cat in categories">
+                    <td ng-if="!cat.isEditing">{{cat.name}}</td>
+                    <td ng-if="cat.isEditing">
+                        <input type="text" ng-model="cat.name" class="form-control" placeholder="catgory name"/>
+                    </td>
+                    <td>
+                        <button type="button" ng-if="!cat.isEditing" ng-click="edit(cat)" class="btn btn-primary">Edit</button>
+                        <button type="button" ng-if="cat.isEditing" ng-click="save(cat)" class="btn btn-success">Save</button>
+                        <button type="button" ng-click="delete(cat.id)" class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

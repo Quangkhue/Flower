@@ -1,0 +1,56 @@
+.no-padding {
+    padding: 0px;
+}
+
+.no-margin {
+    margin: 0px;
+}
+
+.sidenav {
+    list-style: none;
+    height: 100%;
+    overflow-x: hidden;
+    width: 250px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    padding-top: 60px;
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.sidenav li {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.sidenav li:hover {
+    color: blue;
+}
+
+.sidenav li.active {
+    color: green;
+}
+
+.sidenav ul {
+    list-style: none;
+}
+
+.sidenav li.parent ul{
+    padding-left: 0px;
+}
+
+.main-content {
+    margin-left: 250px;
+}
+
+.add-btn {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
