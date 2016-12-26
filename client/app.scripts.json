@@ -9,8 +9,8 @@
         "bootstrap",
         "angular-animate",
         "angular-sanitize",
-        "angular-bootstrap-tpl",
-        "angular-bootstrap"
+        "angular-bootstrap",
+        "angular-bootstrap-tpl"
     ],
     "vendor.datatables": [
 
