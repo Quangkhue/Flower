@@ -14,7 +14,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/categories', function(req, res, next){
-    Product.getProductsByCatIds(req.body.catIds).then(function(result){
+    Product.getProductsByCatIds(req.body.catIds.map(function(id){
+        return mongoose.Types.ObjectId(id);
+    })).then(function(result){
         APIResHandler.successHandler(res, result);
     }, function(error){
         APIResHandler.errorHandler(res, error);

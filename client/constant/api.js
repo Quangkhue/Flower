@@ -2,7 +2,12 @@
 var host = "http://localhost:8080/v1/"
 var API_URL = {
     PRODUCT: {
-        LIST: host + "products"
+        LIST: host + "products",
+        LIST_BY_CAT: host + "products/categories",
+        NEW: host + "products",
+        UPDATE: host + "products/",
+        DETAIL: host + "products/",
+        DELETE: host + "products/"
     },
     CATEGORY: {
         LIST: host + "categories",
