@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller("CategoryListCtrl", function($scope, $rootScope, CategorySvc, $uibModal){
+app.controller("CategoryListCtrl", function($scope, $rootScope, CategorySvc, $uibModal, AlertSvc){
     console.log("Category list ctrl");
 
     $scope.init = function(){
@@ -14,9 +14,13 @@ app.controller("CategoryListCtrl", function($scope, $rootScope, CategorySvc, $ui
         cat.isEditing = true;
     }
 
-    $scope.delete = function(catId){
-        console.log("Cat id: ", catId);
-        CategorySvc.delete(catId);
+    $scope.delete = function(catId, index){
+        AlertSvc.showConfirm("", "", function(){
+            CategorySvc.delete(catId).then(function(){
+                $scope.categories.splice(index, 1);
+                AlertSvc.showSuccessAlert("Success", "Delete success");
+            });
+        })
     }
 
     $scope.save = function(cat){

@@ -10,7 +10,8 @@
         "angular-animate",
         "angular-sanitize",
         "angular-bootstrap",
-        "angular-bootstrap-tpl"
+        "angular-bootstrap-tpl",
+        "sweet-alert"
     ],
     "vendor.datatables": [
 
@@ -27,6 +28,7 @@
     "angular-animate": "bower_components/angular-animate/angular-animate.min.js",
     "angular-sanitize": "bower_components/angular-sanitize/angular-sanitize.min.js",
     "angular": "bower_components/angular/angular.min.js",
-    "angular-ui-router": "bower_components/angular-ui-router/release/angular-ui-router.min.js"
+    "angular-ui-router": "bower_components/angular-ui-router/release/angular-ui-router.min.js",
+    "sweet-alert": "bower_components/sweetalert/dist/sweetalert.min.js"
   }
 }

@@ -22,7 +22,7 @@
                     <td>
                         <button type="button" ng-if="!cat.isEditing" ng-click="edit(cat)" class="btn btn-primary">Edit</button>
                         <button type="button" ng-if="cat.isEditing" ng-click="save(cat)" class="btn btn-success">Save</button>
-                        <button type="button" ng-click="delete(cat.id)" class="btn btn-danger">Delete</button>
+                        <button type="button" ng-click="delete(cat.id, $index)" class="btn btn-danger">Delete</button>
                     </td>
                 </tr>
             </tbody>
