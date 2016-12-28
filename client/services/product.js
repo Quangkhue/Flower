@@ -1,6 +1,6 @@
 'use strict';
 
-app.service("ProductSvc", function($rootScope, Product, $q, ConnectionSvc){
+app.service("ProductSvc", function($rootScope, Product, $q, ConnectionSvc, AlertSvc){
     this.getProducts = function(){
         var result = [];
         var dfd = $q.defer();
@@ -46,7 +46,16 @@ app.service("ProductSvc", function($rootScope, Product, $q, ConnectionSvc){
     };
 
     this.getById = function(id){
-        return ConnectionSvc.get(API_URL.PRODUCT.DETAIL + id);
+        var dfd = $q.defer();
+        ConnectionSvc.get(API_URL.PRODUCT.DETAIL + id).then(function(prod){
+            var p = new Product();
+            p.parse(prod);
+            dfd.resolve(prod);
+        }, function(error){
+            AlertSvc.showErrorMsg("Error", "Get product error: " + error.toString());
+            dfd.reject(error);
+        })
+        return dfd.promise;
     };
 
     this.delete = function(id){

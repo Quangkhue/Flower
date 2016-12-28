@@ -3,7 +3,8 @@
     "vendor": [
         "jquery",
         "angular",
-        "angular-ui-router"
+        "angular-ui-router",
+        "angular-ui-select"
     ],
     "vendor.ui": [
         "bootstrap",
@@ -29,6 +30,7 @@
     "angular-sanitize": "bower_components/angular-sanitize/angular-sanitize.min.js",
     "angular": "bower_components/angular/angular.min.js",
     "angular-ui-router": "bower_components/angular-ui-router/release/angular-ui-router.min.js",
-    "sweet-alert": "bower_components/sweetalert/dist/sweetalert.min.js"
+    "sweet-alert": "bower_components/sweetalert/dist/sweetalert.min.js",
+    "angular-ui-select": "bower_components/angular-ui-select/dist/select.min.js"
   }
 }

@@ -1,0 +1,20 @@
+<div class="form" ng-init=init()>
+    <div class="row">
+        <div class="col col-sm-6">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" ng-model="prod.name" />
+            </div>
+
+            <div class="form-group">
+                <label>Category</label>
+                <ui-select multiple ng-model="prod.cats" theme="bootstrap" close-on-select="false" style="width: 100%;" title="Choose catgory">
+                    <ui-select-match placeholder="Select categories...">{{$item.name}}</ui-select-match>
+                    <ui-select-choices repeat="cat.id as cat in cats | filter:$select.search">
+                        <div ng-bind-html="cat.name | highlight: $select.search"></div>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+        </div>
+    </div>
+</div>

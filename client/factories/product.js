@@ -24,7 +24,7 @@ app.factory("Product", function(){
             this.cats = p.cats;
             this.comments = p.comments;
             this.imgUrls = p.imgUrls;
-        }
+        };
 
         this.init();
     }

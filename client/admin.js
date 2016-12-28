@@ -1,5 +1,5 @@
 'use strict';
-var app = angular.module("FlowerAdmin", ['ngAnimate', 'ngSanitize', 'ui.bootstrap', 'ui.router']);
+var app = angular.module("FlowerAdmin", ['ngAnimate', 'ngSanitize', 'ui.bootstrap', 'ui.router', 'ui.select']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider.state('app', {
@@ -36,7 +36,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller: "ProductDetailCtrl",
             resolve: {
                 prod: function($stateParams, ProductSvc){
-                    return {};
+                    return $stateParams.id ? ProductSvc.getById($stateParams.id) : {};
                 }
             }
         })

@@ -10,6 +10,7 @@ app.controller("ProductListCtrl", function($scope, $rootScope, ProductSvc){
 
     $scope.edit = function(prod){
         console.log("edit prod: ", prod);
+        $scope.goToPage('app.product-detail', {id: prod.id});
     }
 
     $scope.delete = function(prodId, index){
