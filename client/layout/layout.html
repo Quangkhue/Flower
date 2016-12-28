@@ -42,12 +42,12 @@
 <section class="main_section_container content-wraper">
   <div ng-class="{'container': $state.current.name != 'app.home'}">
     <div class="row nothing" ng-class="{'no-padding no-margin' : notShowSideBar.indexOf($state.current.name) >= 0}">
-      <div class="btn-group btn-breadcrumb" ng-if="notShowSideBar.indexOf($state.current.name) < 0">
+      <!--<div class="btn-group btn-breadcrumb" ng-if="notShowSideBar.indexOf($state.current.name) < 0">
         <a href="#" class="btn btn-info"><i class="glyphicon glyphicon-home"></i></a>
         <a href="#" class="btn btn-info">Snippets</a>
         <a href="#" class="btn btn-info">Breadcrumbs</a>
         <a href="#" class="btn btn-info">Info</a>
-      </div>
+      </div>-->
       <section ui-view class="main-content col" ng-class="{'col-sm-8': notShowSideBar.indexOf($state.current.name) < 0}">
       </section>
       <aside class="col-sm-4" ng-if="notShowSideBar.indexOf($state.current.name) < 0">
