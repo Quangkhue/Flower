@@ -19,8 +19,8 @@ app.service('AlertSvc', function($rootScope){
           showCancelButton: true,
           confirmButtonClass: "btn-danger",
           confirmButtonText: "Yes, delete it!",
-          closeOnConfirm: false,
-          closeOnCancel: false
+          closeOnConfirm: true,
+          closeOnCancel: true
         },cb);
     }
 })

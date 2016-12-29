@@ -3,17 +3,98 @@
         <div class="col col-sm-6">
             <div class="form-group">
                 <label>Name</label>
-                <input type="text" class="form-control" ng-model="prod.name" />
+                <input type="text" class="form-control" ng-model="prod.name" placeholder="Name" />
             </div>
 
             <div class="form-group">
                 <label>Category</label>
-                <ui-select multiple ng-model="prod.cats" theme="bootstrap" close-on-select="false" style="width: 100%;" title="Choose catgory">
+                <ui-select multiple ng-model="prod.cats" theme="bootstrap" close-on-select="false" title="Choose catgory">
                     <ui-select-match placeholder="Select categories...">{{$item.name}}</ui-select-match>
                     <ui-select-choices repeat="cat.id as cat in cats | filter:$select.search">
                         <div ng-bind-html="cat.name | highlight: $select.search"></div>
                     </ui-select-choices>
                 </ui-select>
+            </div>
+
+            <div class="form-group">
+                <label>Short description</label>
+                <textarea class="form-control" type="text" ng-model="prod.shortDes" rows="4" placeholder="Product short description" />
+            </div>
+
+            <div class="form-group">
+                <label>Full description</label>
+                <textarea class="form-control" type="text" ng-model="prod.fullDes" rows="7" placeholder="Product full description" />
+            </div>
+
+            <div class="button-group text-center">
+                <button class="btn btn-primary" ng-click="save()">Save</button>
+                <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+            </div>
+        </div>
+
+        <div class="col col-sm-6">
+            <div class="form-group">
+                <label class="control-label">Images</label>
+                <div class="form-control">
+                    <input nv-file-select type="file" uploader="imageUploader" multiple />
+                </div>
+            </div>
+            <div class="img-preview">
+                <table style="width: 100%;" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>File name</th>
+                            <th></th>
+                            <th width="50">Action</th>
+                            <tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in imageUploader.queue">
+                            <td>
+                                <strong>{{ item.file.name }}</strong>
+                            </td>
+                            <td class="text-align-center">
+                                <div ng-show="imageUploader.isHTML5" ng-thumb="{ file: item._file, height: 100 }"></div>
+                            </td>
+                            <td nowrap>
+                                <div class="input-group text-align-center btn-group btn-group-xs">
+                                    <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+                                                                <span class="glyphicon glyphicon-trash"></span>
+                                                            </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="img-preview" ng-if="prod.imgUrls.length">
+                <table style="width: 100%;" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>File name</th>
+                            <th></th>
+                            <th width="50">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in prod.imgUrls">
+                            <td>
+                                <strong>{{item}}</strong>
+                            </td>
+                            <td class="text-align-center">
+                                <img ng-src="{{host}}{{item}}" width="100%">
+                            </td>
+                            <td nowrap>
+                                <div class="input-group text-align-center btn-group btn-group-xs">
+                                    <button type="button" class="btn btn-danger btn-xs" ng-click="removeAttachedFile($index)">
+                                                                <span class="glyphicon glyphicon-trash"></span>
+                                                            </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

@@ -24,6 +24,7 @@
     "angular-animate": "^1.6.0",
     "angular-sanitize": "^1.6.0",
     "bootstrap-sweetalert": "^1.0.1",
-    "angular-ui-select": "^0.19.6"
+    "angular-ui-select": "^0.19.6",
+    "angular-file-upload": "^2.4.1"
   }
 }

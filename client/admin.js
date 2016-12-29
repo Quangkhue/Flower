@@ -1,5 +1,5 @@
 'use strict';
-var app = angular.module("FlowerAdmin", ['ngAnimate', 'ngSanitize', 'ui.bootstrap', 'ui.router', 'ui.select']);
+var app = angular.module("FlowerAdmin", ['ngAnimate', 'ngSanitize', 'ui.bootstrap', 'ui.router', 'ui.select', 'angularFileUpload']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider.state('app', {

@@ -54,3 +54,8 @@
     margin-top: 20px;
     margin-bottom: 10px;
 }
+
+.img-preview {
+    max-height: 283px;
+    overflow-x: auto;
+}

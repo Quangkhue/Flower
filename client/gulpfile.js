@@ -25,7 +25,7 @@ var source = {
             'factories/*.js',
 
             // services
-            'services/*.js',
+            'services/!(uploadHandler)*.js',
 
             // main controller
             'layout/main.js',
@@ -41,6 +41,8 @@ var source = {
             // factories
             'factories/*.js',
 
+            // directives
+            'directives/*.js',
             // services
             'services/*.js',
 

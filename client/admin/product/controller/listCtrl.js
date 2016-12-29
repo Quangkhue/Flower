@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller("ProductListCtrl", function($scope, $rootScope, ProductSvc){
+app.controller("ProductListCtrl", function($scope, $rootScope, ProductSvc, AlertSvc){
     $scope.init = function(){
         ProductSvc.getProducts().then(function(result){
             $scope.products = angular.copy(result);
@@ -14,11 +14,12 @@ app.controller("ProductListCtrl", function($scope, $rootScope, ProductSvc){
     }
 
     $scope.delete = function(prodId, index){
-        console.log("Cat id: ", prodId);
-        ProductSvc.delete(prodId).then(function(res){
-            console.log("Delete product response: ", res);
-            $scope.products.splice(index, 1);
-        });
+        AlertSvc.showConfirm("",  "", function(){
+            ProductSvc.delete(prodId).then(function(res){
+                $scope.products.splice(index, 1);
+                AlertSvc.showSuccessMsg("Success", "Delete product success");
+            });
+        })
     }
 
     $scope.displayCatName = function(cats){
@@ -28,6 +29,6 @@ app.controller("ProductListCtrl", function($scope, $rootScope, ProductSvc){
     }
 
     $scope.addNew = function(){
-        console.log("Add new product");
+        $scope.goToPage('app.product-detail');
     }
 });

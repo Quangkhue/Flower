@@ -4,7 +4,8 @@
         "jquery",
         "angular",
         "angular-ui-router",
-        "angular-ui-select"
+        "angular-ui-select",
+        "angular-file-upload"
     ],
     "vendor.ui": [
         "bootstrap",
@@ -31,6 +32,7 @@
     "angular": "bower_components/angular/angular.min.js",
     "angular-ui-router": "bower_components/angular-ui-router/release/angular-ui-router.min.js",
     "bootstrap-sweet-alert": "bower_components/bootstrap-sweetalert/dist/sweetalert.min.js",
-    "angular-ui-select": "bower_components/angular-ui-select/dist/select.min.js"
+    "angular-ui-select": "bower_components/angular-ui-select/dist/select.min.js",
+    "angular-file-upload": "bower_components/angular-file-upload/dist/angular-file-upload.min.js"
   }
 }
