@@ -80,10 +80,10 @@
                     <tbody>
                         <tr ng-repeat="item in prod.imgUrls">
                             <td>
-                                <strong>{{item}}</strong>
+                                <strong>{{displayImgName(item)}}</strong>
                             </td>
                             <td class="text-align-center">
-                                <img ng-src="{{host}}{{item}}" width="100%">
+                                <img ng-src="{{item}}" width="100%">
                             </td>
                             <td nowrap>
                                 <div class="input-group text-align-center btn-group btn-group-xs">

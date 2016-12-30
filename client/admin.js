@@ -36,7 +36,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller: "ProductDetailCtrl",
             resolve: {
                 prod: function($stateParams, ProductSvc){
-                    return $stateParams.id ? ProductSvc.getById($stateParams.id) : {};
+                    return $stateParams.id ? ProductSvc.getById($stateParams.id) : null;
                 }
             }
         })
