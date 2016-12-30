@@ -6,7 +6,9 @@ var schema = BaseSchema();
 schema.add({
     name: String,
     imgUrls: [String],
-    description: String,
+    shortDes: String,
+    fullDes: String,
+    comments: [{type: Schema.Types.ObjectId, ref: 'comments'}],
     cats: [{ type: Schema.Types.ObjectId, ref: 'category' }]
 });
 
