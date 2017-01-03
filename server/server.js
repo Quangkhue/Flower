@@ -3,8 +3,9 @@ var bodyParser = require('body-parser')
 var path = require('path')
 var compression = require('compression')
 var mongoose = require('mongoose')
-var productCtrl = require('./routes/product')
-var categoryCtrl = require('./routes/category')
+var productRoute = require('./routes/product')
+var categoryRoute = require('./routes/category')
+var fileRoute = require('./routes/file')
 
 // Use native Node promises
 mongoose.Promise = global.Promise;
@@ -15,24 +16,26 @@ mongoose.connect('mongodb://localhost/Flower')
 var app = express()
 
 app.use(compression())
-
+app.use(bodyParser())
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 // serve our static stuff like index.css
 app.use('/', express.static(path.join(__dirname, '../client')))
+app.use('/files', express.static(path.join(__dirname, '/files')))
 
 // routes
-app.use('/v1/products', productCtrl)
-app.use('/v1/categories', categoryCtrl)
+app.use('/v1/products', productRoute)
+app.use('/v1/categories', categoryRoute)
+app.use('/v1/files', fileRoute)
 
+// route for client
 app.get('/', function (req, res) {
-    console.log("Main page!");
     res.sendFile(path.join(__dirname, '../client/index.html'))
 });
 
+// route for admin
 app.get('/admin', function (req, res) {
-    console.log("Main page!");
     res.sendFile(path.join(__dirname, '../client/admin.html'))
 })
 

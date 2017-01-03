@@ -41,8 +41,8 @@ app.service("ProductSvc", function($rootScope, Product, $q, ConnectionSvc, Alert
         return ConnectionSvc.post(API_URL.PRODUCT.NEW, prod);
     };
 
-    this.update = function(cat){
-        return ConnectionSvc.put(API_URL.PRODUCT.UPDATE + cat.id, prod);
+    this.update = function(prod){
+        return ConnectionSvc.put(API_URL.PRODUCT.UPDATE + prod.id, prod);
     };
 
     this.getById = function(id){

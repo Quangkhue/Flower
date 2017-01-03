@@ -5,13 +5,7 @@ app.service('FileUploadSvc', ['$rootScope', 'FileUploader', 'AlertSvc', function
     var uploadedFilesUrl = [];
     var successCb = [];
     var completeItemCb = [];
-    var url = '/files/upload';
-    if (window.location.hostname.indexOf('fmp') > -1) {
-        url = "http://fmp.vastbit.com" + url;
-    } else
-    if (window.location.hostname.indexOf('localhost') > -1) {
-        url = "http://doctornex.com" + url;
-    }
+    var url = 'http://localhost:8080/v1/files/upload';
 
     // Default uploader
     var uploader = new FileUploader({
@@ -116,10 +110,8 @@ app.service('FileUploadSvc', ['$rootScope', 'FileUploader', 'AlertSvc', function
             console.info('onCancelItem', fileItem, response, status, headers);
         };
         u.onCompleteItem = function (fileItem, response, status, headers) {
-            console.log("File item: ", fileItem);
-
             if(completeItemCb.length)
-                completeItemCb[0](fileItem);
+                completeItemCb[0](fileItem, response, status, headers);
         };
         u.onCompleteAll = function () {
             if(!successCb || !successCb.length){

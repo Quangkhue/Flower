@@ -6,7 +6,7 @@ app.factory("Product", function(){
             this.id = "",
             this.name = "",
             this.shortDes = "",
-            this.longDes = "",
+            this.fullDes = "",
             this.createdBy = "",
             this.isDeleted = false,
             this.imgUrls = [],
@@ -18,12 +18,12 @@ app.factory("Product", function(){
             this.id = p.id;
             this.name = p.name;
             this.shortDes = p.shortDes;
-            this.longDes = p.longDes;
+            this.fullDes = p.longDes;
             this.createdBy = p.createdBy;
             this.isDeleted = p.isDeleted;
             this.cats = p.cats;
             this.comments = p.comments;
-            this.imgUrls = p.imgUrls;
+            this.imgUrls = p.imgUrls || [];
         };
 
         this.init();
