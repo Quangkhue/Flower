@@ -7,7 +7,6 @@ var PAGING_CFG = {
 }
 
 module.exports.getProducts = function(req, res, next){
-    console.log(req.query);
     var page = req.query.page || 1;
     var offset = (page - 1) * PAGING_CFG.itemsPerPage;
     var opts = {sort: {updatedAt: -1}, skip: offset, limit: PAGING_CFG.itemsPerPage};

@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var BaseSchema = require('baseSchema');
+var BaseSchema = require('./baseSchema');
 
 var schema = BaseSchema();
 schema.add({
@@ -10,4 +10,6 @@ schema.add({
     address: Schema.Types.Mixed
 });
 
-modules.exports = mongoose.model("user", schema);
+var User = mongoose.model("user", schema);
+
+module.exports = User;

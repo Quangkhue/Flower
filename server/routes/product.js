@@ -1,12 +1,11 @@
 var express = require('express');
 var router = express.Router();
-// var mongoose = require('mongoose');
-// var Product = require('../models/product');
 var ProductCtrl = require('../controllers/product');
+var auth = require('../authentication')
 
-router.put('/:id', ProductCtrl.updateProduct);
-router.delete('/:id', ProductCtrl.deleteProduct);
-router.post('/', ProductCtrl.createProduct);
+router.put('/:id', auth, ProductCtrl.updateProduct);
+router.delete('/:id', auth, ProductCtrl.deleteProduct);
+router.post('/', auth, ProductCtrl.createProduct);
 router.post('/categories', ProductCtrl.getProductByCats);
 router.get('/count', ProductCtrl.getCount);
 router.get('/', ProductCtrl.getProducts);

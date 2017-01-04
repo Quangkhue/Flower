@@ -3,9 +3,16 @@ var bodyParser = require('body-parser')
 var path = require('path')
 var compression = require('compression')
 var mongoose = require('mongoose')
+var jwt = require('jsonwebtoken')
+
+
 var productRoute = require('./routes/product')
 var categoryRoute = require('./routes/category')
 var fileRoute = require('./routes/file')
+var userRoute = require('./routes/user')
+
+// Middleware
+var auth = require('./authentication')
 
 // Use native Node promises
 mongoose.Promise = global.Promise;
@@ -14,6 +21,8 @@ mongoose.connect('mongodb://localhost/Flower')
   .catch((err) => console.error(err));
 
 var app = express()
+
+app.set('superSecret', "LocDepZaiHeHe");
 
 app.use(compression());
 app.use(bodyParser.json()); // for parsing application/json
@@ -27,6 +36,7 @@ app.use('/files', express.static(path.join(__dirname, '/files')))
 app.use('/v1/products', productRoute)
 app.use('/v1/categories', categoryRoute)
 app.use('/v1/files', fileRoute)
+app.use('/v1/users', userRoute)
 
 // route for client
 app.get('/', function (req, res) {
