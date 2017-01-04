@@ -2,9 +2,16 @@ var mongoose = require('mongoose');
 var Product = require('../models/product');
 var APIResHandler = require('../routes/apiResponseHandler');
 
+var PAGING_CFG = {
+    itemsPerPage: 6
+}
+
 module.exports.getProducts = function(req, res, next){
-    var query = req.param('query');
-    Product.find({isDeleted: {$ne: true}}).populate('cats').exec().then(function(result) {
+    console.log(req.query);
+    var page = req.query.page || 1;
+    var offset = (page - 1) * PAGING_CFG.itemsPerPage;
+    var opts = {sort: {updatedAt: -1}, skip: offset, limit: PAGING_CFG.itemsPerPage};
+    Product.find({isDeleted: {$ne: true}}, {}, opts).populate('cats').exec().then(function(result) {
         APIResHandler.successHandler(res, result);
     }, function(error){
         APIResHandler.errorHandler(res, error);
@@ -54,6 +61,14 @@ module.exports.getProductByCats = function(req, res, next){
     Product.getProductsByCatIds(req.body.catIds.map(function(id){
         return mongoose.Types.ObjectId(id);
     })).then(function(result){
+        APIResHandler.successHandler(res, result);
+    }, function(error){
+        APIResHandler.errorHandler(res, error);
+    });
+}
+
+module.exports.getCount = function(req, res, next){
+    Product.count().exec().then(function(result){
         APIResHandler.successHandler(res, result);
     }, function(error){
         APIResHandler.errorHandler(res, error);

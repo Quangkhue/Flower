@@ -4,12 +4,10 @@ var mongoose = require('mongoose');
 var BaseSchema = function() {
     var schema = new mongoose.Schema({
         createdAt: {
-            type: Date,
-            default: Date.now()
+            type: Date
         },
         updatedAt: {
-            type: Date,
-            default: Date.now()
+            type: Date
         },
         isDeleted: {
             type: Boolean,
@@ -28,6 +26,8 @@ var BaseSchema = function() {
 
     schema.pre('save', function setId(next){
         if(this.isNew){
+            this.createdAt = new Date();
+            this.updatedAt = this.createdAt;
             this.id = this._id.toString();
         }
         next();
