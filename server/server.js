@@ -15,8 +15,7 @@ mongoose.connect('mongodb://localhost/Flower')
 
 var app = express()
 
-app.use(compression())
-app.use(bodyParser())
+app.use(compression());
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
