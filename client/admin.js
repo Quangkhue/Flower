@@ -1,5 +1,5 @@
 'use strict';
-var app = angular.module("FlowerAdmin", ['ngAnimate', 'ngSanitize', 'ui.bootstrap', 'ui.router', 'ui.select', 'angularFileUpload']);
+var app = angular.module("FlowerAdmin", ['ngAnimate', 'ngSanitize', 'ui.bootstrap', 'ui.router', 'ui.select', 'angularFileUpload', 'ngCookies']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider.state('app', {
@@ -40,6 +40,19 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+        .state('login', {
+            views: {
+                root: {
+                    templateUrl: "/admin/user/login.html",
+                    controller: "LoginCtrl"
+                }
+            },
+            url: "/login"
+        })
 
     $urlRouterProvider.otherwise('/product');
 });
+
+app.run(function($state, $cookies, $rootScope){
+    console.log("App run!");
+})

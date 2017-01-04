@@ -73,3 +73,17 @@ ul.pagination li span.active:hover {
     background-color: grey;
     color: white;
 }
+
+.text-center {
+    text-align: center;
+}
+
+.login-form {
+    margin: 10% 30% 10% 30%;
+    padding: 15px 5% 25px 5%;
+    border: 1px solid grey;
+}
+
+.login-form btn-group {
+    margin-top: 5px;
+}

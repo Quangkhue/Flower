@@ -1,6 +1,6 @@
 'use strict';
 
-app.service("ConnectionSvc", function($q, $http){
+app.service("ConnectionSvc", function($q, $http, $state){
     this.get = function(url, params){
         var dfd = $q.defer();
         $http.get(url, {params: params || {}}).then(function(res){
@@ -43,6 +43,9 @@ app.service("ConnectionSvc", function($q, $http){
 
     var errorHanlder = this.errorHandler = function(error){
         console.log(error);
+        if(error.data.status == 403){
+            $state.go("login");
+        }
     };
 
     var successHandler = this.successHandler = function(res){

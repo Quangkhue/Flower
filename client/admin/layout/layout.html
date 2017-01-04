@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" ng-show="isAuthentication">
     <div class="row">
         <div class="sidenav">
             <ul>
@@ -8,7 +8,7 @@
                 <li ng-class="{active: ['app.category', 'app.category-detail'].indexOf($state.current.name) > -1}">
                     <span ng-click="goToPage('app.category')">Category</span>
                 </li>
-                <li>Log out</li>
+                <li ng-click="logout()">Log out</li>
             </ul>
         </div>
 
