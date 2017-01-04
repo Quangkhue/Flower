@@ -26,11 +26,5 @@
             </tbody>
         </table>
     </div>
-    <div class="row">
-        <ul class="pagination">
-            <li ng-class="{'disabled': currentPage == 1}"><span href="#" ng-click="go2Page(1)">First</span></li>
-            <li ng-repeat="i in getRange() track by $index"><span ng-class="{'active': currentPage == i}" ng-click="go2Page(i)">{{i}}</span></li>
-            <li ng-class="{'disabled': currentPage == totalPage}"><span href="#" ng-click="go2Page(totalPage)">Last</span></li>
-        </ul>
-    </div>
+    <paging ng-model="products" get-data="getProductsByPage" count="count" items-per-page="6"></paging>
 </div>
