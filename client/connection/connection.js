@@ -3,7 +3,7 @@
 app.service("ConnectionSvc", function($q, $http){
     this.get = function(url, params){
         var dfd = $q.defer();
-        $http.get(url).then(function(res){
+        $http.get(url, {params: params || {}}).then(function(res){
             dfd.resolve(successHandler(res));
         }, function(error){
             dfd.reject(errorHanlder(error));

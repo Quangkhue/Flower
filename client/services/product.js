@@ -1,10 +1,10 @@
 'use strict';
 
 app.service("ProductSvc", function($rootScope, Product, $q, ConnectionSvc, AlertSvc){
-    this.getProducts = function(){
+    this.getProducts = function(params){
         var result = [];
         var dfd = $q.defer();
-        ConnectionSvc.get(API_URL.PRODUCT.LIST).then(function(res){
+        ConnectionSvc.get(API_URL.PRODUCT.LIST, params).then(function(res){
             angular.forEach(res, function(prod){
                 var p = new Product();
                 p.parse(prod);
@@ -60,5 +60,17 @@ app.service("ProductSvc", function($rootScope, Product, $q, ConnectionSvc, Alert
 
     this.delete = function(id){
         return ConnectionSvc.delete(API_URL.PRODUCT.DELETE + id);
+    };
+
+    this.count = function(){
+        var dfd = $q.defer();
+        ConnectionSvc.get(API_URL.PRODUCT.COUNT).then(function(result){
+            dfd.resolve(result);
+        }, function(error){
+            console.log("This is error: ", error);
+            dfd.reject(error);
+        });
+
+        return dfd.promise;
     }
 });

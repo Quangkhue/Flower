@@ -21,7 +21,7 @@ app.factory("Product", function(){
             this.fullDes = p.longDes;
             this.createdBy = p.createdBy;
             this.isDeleted = p.isDeleted;
-            this.cats = p.cats;
+            this.cats = p.cats || [];
             this.comments = p.comments;
             this.imgUrls = p.imgUrls || [];
         };

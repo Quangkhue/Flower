@@ -2,6 +2,7 @@
   "chunks": {
     "vendor": [
         "jquery",
+        "underscore",
         "angular",
         "angular-ui-router",
         "angular-ui-select",
@@ -24,6 +25,7 @@
   },
   "paths": {
     "jquery": "bower_components/jquery/dist/jquery.min.js",
+    "underscore": "js/underscore.js",
     "bootstrap": "bower_components/bootstrap/dist/js/bootstrap.min.js",
     "angular-bootstrap-tpl": "bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js",
     "angular-bootstrap": "bower_components/angular-bootstrap/ui-bootstrap.min.js",

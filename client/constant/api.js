@@ -7,13 +7,15 @@ var API_URL = {
         NEW: host + "products",
         UPDATE: host + "products/",
         DETAIL: host + "products/",
-        DELETE: host + "products/"
+        DELETE: host + "products/",
+        COUNT: host + "products/count"
     },
     CATEGORY: {
         LIST: host + "categories",
         NEW: host + "categories",
         UPDATE: host + "categories/",
         DETAIL: host + "categories/",
-        DELETE: host + "categories/"
+        DELETE: host + "categories/",
+        COUNT: host + "categories/count"
     }
 }
