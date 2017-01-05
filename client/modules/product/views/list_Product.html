@@ -1,33 +1,20 @@
 <div ng-init="init()">
-    <article> <img src="images/content__images/image_240x230.jpg" alt="pic1" class="pull-left img-responsive" style="margin-right: 10px;">
-        <div class="text">
-            <h3><a href="#">Lorem ipsum dolor sit consectetuer adipiscing elit. Donec odio.</a></h3>
-            <p class="small-paragraph">Lorem ipsum dolor sit amet</p>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada
-                erat ut turpis. Suspendisse urna</p>
-            <p><a href="#" class="btn btn-info">Learn more</a></p>
+    <article ng-repeat="p in products" class="row none-padding">
+        <div class="col col-sm-4">
+            <img ng-src="{{p.imgUrls[0]}}" alt="pic3" class="img-responsive">
+        </div>
+        <div class="col col-sm-8">
+            <div class="text">
+                <h3><span class="product-name" ng-click="goToDetail(p.id)">{{p.name}}</span></h3>
+                <p>{{p.shortDes}}</p>
+                <p><a href="#" class="btn btn-info">Learn more</a></p>
+            </div>
         </div>
         <div class="clearfix"></div>
     </article>
-    <article> <img src="images/content__images/image_240x230.jpg" alt="pic2" class="pull-left img-responsive" style="margin-right: 10px;">
-        <div class="text">
-            <h3><a href="#">Lorem ipsum dolor sit consectetuer adipiscing elit. Donec odio.</a></h3>
-            <p class="small-paragraph">Lorem ipsum dolor sit amet</p>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada
-                erat ut turpis. Suspendisse urna</p>
-            <p><a href="#" class="btn btn-info">Learn more</a></p>
+    <div class="row none-padding">
+        <div class="col col-sm-12">
+            <paging ng-model="products" get-data="getProductsByPage" count="count" items-per-page="6"></paging>
         </div>
-        <div class="clearfix"></div>
-    </article>
-    <article> <img src="images/content__images/image_240x230.jpg" alt="pic3" class="pull-left img-responsive" style="margin-right: 10px;">
-        <div class="text">
-            <h3><a href="#">Lorem ipsum dolor sit consectetuer adipiscing elit. Donec odio.</a></h3>
-            <p class="small-paragraph">Lorem ipsum dolor sit amet</p>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada
-                erat ut turpis. Suspendisse urna</p>
-            <p><a href="#" class="btn btn-info">Learn more</a></p>
-        </div>
-        <div class="clearfix"></div>
-    </article>
-
+    </div>
 </div>

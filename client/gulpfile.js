@@ -24,6 +24,10 @@ var source = {
             // factories
             'factories/*.js',
 
+            // directives
+            'directives/*.js',
+            'directives/**/*.js',
+
             // services
             'services/!(uploadHandler)*.js',
 
@@ -43,6 +47,8 @@ var source = {
 
             // directives
             'directives/*.js',
+            'directives/**/*.js',
+
             // services
             'services/*.js',
 

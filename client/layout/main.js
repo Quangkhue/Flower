@@ -1,5 +1,5 @@
 'use strict';
-app.controller('MainCtrl', function($scope, $rootScope, $state){
+app.controller('MainCtrl', function($scope, $rootScope, $state, CategorySvc){
     console.log("Main ctrl!");
 
     $scope.$state = $state;
@@ -8,4 +8,12 @@ app.controller('MainCtrl', function($scope, $rootScope, $state){
     $scope.goToPage = function(stateName, params){
         $state.go(stateName, params);
     }
+
+    $scope.getCategories = function(){
+        CategorySvc.getCategories().then(function(cats){
+            $rootScope.categories = angular.copy(cats);
+        });
+    }
+
+    $scope.getCategories();
 });
