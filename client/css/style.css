@@ -214,14 +214,12 @@ header {
 	font-size: 24px;
 	font-weight: 300;
 	color: #fff;
-	background: #23c3ff;
-	width: 80px;
-	height: 47px;
+	height: 105px;
 	text-transform: none;
 	line-height: 47px;
 	text-align: center;
 	display: inline-block;
-	margin: 26px auto;
+	margin: auto;
 	padding: 0;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
@@ -1369,4 +1367,15 @@ ul.pagination li.active {
 
 .none-padding {
 	padding: 0px !important;
+}
+
+.logo {
+	background: none !important;
+	width: 100% !important;
+	margin: 0px !important;
+}
+
+.logo-img {
+	margin: auto;
+	height: 105px;
 }
