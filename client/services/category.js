@@ -5,10 +5,8 @@ app.service("CategorySvc", function($rootScope, Category, ConnectionSvc, $q){
         var result = [];
         var dfd = $q.defer();
         ConnectionSvc.get(API_URL.CATEGORY.LIST).then(function(res){
-            console.log("api result: ", res)
             angular.forEach(res, function(cat){
                 var c = new Category();
-                console.log("tada: ", c);
                 c.parse(cat);
                 result.push(c);
             })

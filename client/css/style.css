@@ -1358,3 +1358,15 @@ ul.pagination li {
 ul.pagination li.active {
 	color: black;
 }
+
+.product-name {
+	cursor: pointer;
+}
+
+.prod-info {
+	margin-left: 10px;
+}
+
+.none-padding {
+	padding: 0px !important;
+}
