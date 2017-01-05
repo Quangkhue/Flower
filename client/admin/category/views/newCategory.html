@@ -10,6 +10,69 @@
                         <label>Name</label>
                         <input type="text" class="form-control" ng-model="cat.name" />
                     </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Images</label>
+                        <div class="form-control">
+                            <input nv-file-select type="file" uploader="imageUploader" multiple />
+                        </div>
+                    </div>
+                    <div class="img-preview">
+                        <table style="width: 100%;" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>File name</th>
+                                    <th></th>
+                                    <th width="50">Action</th>
+                                    <tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="item in imageUploader.queue">
+                                    <td>
+                                        <strong>{{ item.file.name }}</strong>
+                                    </td>
+                                    <td class="text-align-center">
+                                        <div ng-show="imageUploader.isHTML5" ng-thumb="{ file: item._file, height: 100 }"></div>
+                                    </td>
+                                    <td nowrap>
+                                        <div class="input-group text-align-center btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+                                                                        <span class="glyphicon glyphicon-trash"></span>
+                                                                    </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="img-preview" ng-if="cat.imgUrl">
+                        <table style="width: 100%;" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>File name</th>
+                                    <th></th>
+                                    <th width="50">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <strong>{{displayImgName(cat.imgUrl)}}</strong>
+                                    </td>
+                                    <td class="text-align-center">
+                                        <img ng-src="{{cat.imgUrl}}" width="100%">
+                                    </td>
+                                    <td nowrap>
+                                        <div class="input-group text-align-center btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-danger btn-xs" ng-click="removeAttachedFile($index)">
+                                                                        <span class="glyphicon glyphicon-trash"></span>
+                                                                    </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
