@@ -26,7 +26,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         })
         .state('app.product', {
             templateUrl: "/modules/product/views/list_Product.html",
-            url: "/product",
+            url: "/product/:catId",
             controller: "ProductCtrl"
         })
         .state('app.guide', {

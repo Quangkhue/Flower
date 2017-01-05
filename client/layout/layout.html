@@ -22,7 +22,7 @@
         <li><a href="">Hoa Đồng Tiền</a></li>
         <li><a href="">Hoa Cẩm Chướng</a></li>
         <li><a href="">Hoa Cẩm Tú Cầu</a></li> -->
-        <li ng-repeat="c in categories"><a ui-sref="app.product">{{c.name}}</a></li>
+        <li ng-repeat="c in categories"><a href="#" ng-click="goToPage('app.product', {catId: c.id})">{{c.name}}</a></li>
       </ul>
     </li>
     <li ng-class="{'active': $state.current.name == 'app.guide'}"><a ui-sref="app.guide">Hướng Dẫn Đặt Hoa </a></li>

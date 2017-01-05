@@ -19,10 +19,10 @@ app.service("ProductSvc", function($rootScope, Product, $q, ConnectionSvc, Alert
         return dfd.promise;
     };
 
-    this.getProductByCats = function(catIds){
+    this.getProductByCats = function(catIds, page){
         var result = [];
         var dfd = $q.defer();
-        ConnectionSvc.post(API_URL.PRODUCT.LIST_BY_CAT, catIds).then(function(res){
+        ConnectionSvc.post(API_URL.PRODUCT.LIST_BY_CAT, {catIds: catIds, page: page}).then(function(res){
             angular.forEach(res, function(prod){
                 var p = new Product();
                 p.parse(prod);

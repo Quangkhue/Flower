@@ -3,6 +3,7 @@ app.controller("HomeCtrl", function($scope, $rootScope, ProductSvc, CategorySvc,
     console.log("Home Ctrl");
 
     $scope.init = function(){
+        console.log("categories: ", $rootScope.categories);
         $scope.sliderImgs = [
             {
                 src: "/images/flowers/slider2.jpg",

@@ -1,12 +1,9 @@
 'use strict';
 
-app.controller("ProductCtrl", function($scope,$rootScope, ProductSvc){
+app.controller("ProductCtrl", function($scope, $rootScope, ProductSvc, $stateParams){
     $scope.init = function(){
+        $scope.catId = $stateParams.catId;
         $scope.products = [];
-    }
-
-    $scope.goToDetail = function(id){
-        console.log("Go to detail page");
     }
 
     $scope.count = function(){
@@ -14,7 +11,7 @@ app.controller("ProductCtrl", function($scope,$rootScope, ProductSvc){
     }
 
     $scope.getProductsByPage = function(page){
-        ProductSvc.getProducts({page: page}).then(function(result){
+        ProductSvc.getProductByCats([$scope.catId], page).then(function(result){
             $scope.products = angular.copy(result);
         });
     }

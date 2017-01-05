@@ -8,6 +8,7 @@ app.controller("CategoryListCtrl", function($scope, $rootScope, CategorySvc, $ui
             $scope.cat = cat ? cat : new Category();
             var uploaders = ['imageUploader'];
             FileUploadSvc.initUploader($scope, uploaders);
+            console.log("category: ", $scope.cat);
         }
         $scope.displayImgName = function(path){
             var temp = path.split("/");
@@ -32,10 +33,12 @@ app.controller("CategoryListCtrl", function($scope, $rootScope, CategorySvc, $ui
         };
 
         function doSave(){
+            console.log("Cat to save: ", $scope.cat);
             if($scope.cat.id){
                 // update prod
                 console.log("update product");
                 CategorySvc.update($scope.cat).then(function(result){
+                    console.log(result);
                     $uibModalInstance.close(result);
                 });
             } else {
