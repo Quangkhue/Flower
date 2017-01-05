@@ -3,7 +3,8 @@ var BaseSchema = require('./baseSchema')
 
 var schema = BaseSchema();
 schema.add({
-    name: String
+    name: String,
+    imgUrl: String
 });
 
 var Category = mongoose.model("category", schema);
