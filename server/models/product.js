@@ -15,7 +15,7 @@ schema.add({
 var Product = mongoose.model("product", schema);
 
 Product.getProductsByCatIds = function(catIds){
-    return Product.find({catIds: {$in: catIds}}).exec();
+    return Product.find({cats: {$in: catIds}}).exec();
 }
 
 module.exports = Product;

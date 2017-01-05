@@ -57,9 +57,12 @@ module.exports.deleteProduct = function(req, res, next){
 }
 
 module.exports.getProductByCats = function(req, res, next){
+    var page = req.body.page || 1;
+    var offset = (page - 1) * PAGING_CFG.itemsPerPage;
+    var opts = {sort: {updatedAt: -1}, skip: offset, limit: PAGING_CFG.itemsPerPage};
     Product.getProductsByCatIds(req.body.catIds.map(function(id){
         return mongoose.Types.ObjectId(id);
-    })).then(function(result){
+    }), {}, opts).then(function(result){
         APIResHandler.successHandler(res, result);
     }, function(error){
         APIResHandler.errorHandler(res, error);
