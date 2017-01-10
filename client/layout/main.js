@@ -17,7 +17,6 @@ app.controller('MainCtrl', function($scope, $rootScope, $state, CategorySvc, Pro
 
     $scope.getCategories();
     ProductSvc.getTopProds().then(function(res){
-        console.log('topprods: ', res);
         $rootScope.topProds = angular.copy(res);
     })
 });
