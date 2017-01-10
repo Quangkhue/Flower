@@ -41,7 +41,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
         })
         .state('app.guide', {
             templateUrl: "modules/guide/views/guide.html",
-            url: "/guide"
+            url: "/guide",
+            controller: 'GuideCtrl'
         });
     $urlRouterProvider.otherwise('/home');
 });

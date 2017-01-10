@@ -1,7 +1,131 @@
 <div ng-init="init()">
-    <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="">Hướng dẫn mua hàng</a></li>
-        <li><a data-toggle="tab" href="">Hướng dẫn thanh toán</a></li>
-        <li><a data-toggle="tab" href="">Hình thức giao hàng</a></li>
+    <!--<ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#muaHang">Hướng dẫn mua hàng</a></li>
+        <li><a data-toggle="tab" href="#thanhToan">Hướng dẫn thanh toán</a></li>
+        <li><a data-toggle="tab" href="#giaoHang">Hình thức giao hàng</a></li>
     </ul>
-</div
+    <div class="tab-content">
+        <div id="muaHang" class="tab-pane fade in active">
+            <div class="news-detail">
+                <p><strong>Hướng dẫn mua hàng</strong></p>
+                <p><span>Đối với khách hàng đặt hoa dịp lễ 14/2, 8/3, 20/10, 20/11, tết nguyên đán: vui lòng xem bảng giá tại mục bảng giá trên website (Thông thường chúng tôi sẽ cho đăng giá sỉ đặt trước cho dịp lễ khoảng một tháng trước lễ). Sau khi đã biết giá hoa và các loại phụ liệu quý khách nhắn tin qua điện thoại hoặc gửi email nội dung: loại hoa, số lượng, ngày nhận hoa, địa chỉ nhận hoa ( Ví dụ khách hàng lấy hoa về Tp. Rạch Giá, Kiên Giang thì nói rõ lấy hoa về Rạch Giá), tên, số điện thoại người nhận hoa. Khách hàng ở tỉnh có xe quen thì vui lòng gửi kèm số điện thoại xe quen để chúng tôi gửi đúng xe cho quý khách. Quý khách hàng có sử dụng zalo, facebook thì có thể gửi đơn hàng qua zalo, facebook.</span></p>
+                <p><span>Đối với khách hàng đặt hoa ngày thường: Vì giá hoa ngày thường có biến động nên quý khách vui lòng nhắn tin hoặc gửi email nội dung: loại hoa, số lượng, ngày lấy hoa. Chúng tôi sẽ gửi báo giá hoa sỉ vào ngày quý khách cần để quý khách cân nhắc đặt hoa. Quý khách có sử dụng zalo, facebook có thể gửi yêu cầu báo giá qua zalo, facebook.</span></p>
+                <p><strong><span>Chú ý:</span></strong></p>
+                <p>- Xin<span>&nbsp;</span><span>đừng</span><span>&nbsp;</span>nhắn tin ĐT hỏi hàng và qui cách cây,... (vì
+                    sẽ mất thời gian Chat qua tin nhắn rất nhiều). Có thể hỏi qua email, web, facebook, zalo.</p>
+                <p><strong>-</strong><span><strong>&nbsp;</strong></span>Nếu bạn nào dùng mạng Vina, Mobi thì mình gọi lại ko
+                    mất tiền.</p>
+                <p>- Ưu tiên nghe ĐT sau 17h.</p>
+                <p>- Nhận đơn đặt hàng qua tin nhắn (sẽ gọi ĐT lại).</p>
+                <p>- Nếu có đặt thêm hàng, nhắc hàng, xin vui lòng nhắn tin, gởi mail, nhắn qua web, zalo, facebook. Xin đừng
+                    gọi điện thoại vì có lúc đi ra ngoài sẽ không nhớ, sẽ làm thiếu hàng khi gởi.</p>
+                <p>- Các bạn gọi điện mà máy bận (đang nghe điện thoại của người khác), hoặc không nghe máy ( đang làm vườn
+                    hoặc đi ra ngoài) thì vui lòng nhắn tin, mình sẽ gọi lại sau đó.</p>
+            </div>
+        </div>
+        <div id="thanhToan" class="tab-pane fade">
+            <h3>Menu 1</h3>
+            <p>Some content in menu 1.</p>
+        </div>
+        <div id="giaoHang" class="tab-pane fade">
+            <h3>Menu 2</h3>
+            <p>Some content in menu 2.</p>
+        </div>
+    </div>-->
+    <uib-tabset active="active">
+        <uib-tab index="0" heading="Hướng dẫn mua hàng">
+            </br>
+            <div class="news-detail">
+                </br>
+                <p><strong>Hướng dẫn mua hàng</strong></p>
+                <p><span>Đối với khách hàng đặt hoa dịp lễ 14/2, 8/3, 20/10, 20/11, tết nguyên đán: vui lòng xem bảng giá tại mục bảng giá trên website (Thông thường chúng tôi sẽ cho đăng giá sỉ đặt trước cho dịp lễ khoảng một tháng trước lễ). Sau khi đã biết giá hoa và các loại phụ liệu quý khách nhắn tin qua điện thoại hoặc gửi email nội dung: loại hoa, số lượng, ngày nhận hoa, địa chỉ nhận hoa ( Ví dụ khách hàng lấy hoa về Tp. Rạch Giá, Kiên Giang thì nói rõ lấy hoa về Rạch Giá), tên, số điện thoại người nhận hoa. Khách hàng ở tỉnh có xe quen thì vui lòng gửi kèm số điện thoại xe quen để chúng tôi gửi đúng xe cho quý khách. Quý khách hàng có sử dụng zalo, facebook thì có thể gửi đơn hàng qua zalo, facebook.</span></p>
+                <p><span>Đối với khách hàng đặt hoa ngày thường: Vì giá hoa ngày thường có biến động nên quý khách vui lòng nhắn tin hoặc gửi email nội dung: loại hoa, số lượng, ngày lấy hoa. Chúng tôi sẽ gửi báo giá hoa sỉ vào ngày quý khách cần để quý khách cân nhắc đặt hoa. Quý khách có sử dụng zalo, facebook có thể gửi yêu cầu báo giá qua zalo, facebook.</span></p>
+                <p><strong><span>Chú ý:</span></strong></p>
+                <p>- Xin<span>&nbsp;</span><span>đừng</span><span>&nbsp;</span>nhắn tin ĐT hỏi hàng và qui cách cây,... (vì
+                    sẽ mất thời gian Chat qua tin nhắn rất nhiều). Có thể hỏi qua email, web, facebook, zalo.</p>
+                <p><strong>-</strong><span><strong>&nbsp;</strong></span>Nếu bạn nào dùng mạng Vina, Mobi thì mình gọi lại ko
+                    mất tiền.</p>
+                <p>- Ưu tiên nghe ĐT sau 17h.</p>
+                <p>- Nhận đơn đặt hàng qua tin nhắn (sẽ gọi ĐT lại).</p>
+                <p>- Nếu có đặt thêm hàng, nhắc hàng, xin vui lòng nhắn tin, gởi mail, nhắn qua web, zalo, facebook. Xin đừng
+                    gọi điện thoại vì có lúc đi ra ngoài sẽ không nhớ, sẽ làm thiếu hàng khi gởi.</p>
+                <p>- Các bạn gọi điện mà máy bận (đang nghe điện thoại của người khác), hoặc không nghe máy ( đang làm vườn
+                    hoặc đi ra ngoài) thì vui lòng nhắn tin, mình sẽ gọi lại sau đó.</p>
+            </div>
+        </uib-tab>
+        <uib-tab index="1" heading="Hình thức giao hàng">
+            </br>
+            <div class="news-detail">
+                </br>
+                <p><strong>Hình thức giao hàng</strong></p>
+                <p>Đ<span>ố</span>i v<span>ớ</span>i quý khách hàng t<span>ạ</span>i TP. H<span>ồ</span> Chí Minh: Quý khách
+                    nh<span>ậ</span>n hàng tr<span>ự</span>c ti<span>ế</span>p t<span>ạ</span>i đ<span>ị</span>a ch<span>ỉ</span>                    giao hàng, n<span>ế</span><span>u khách hàng nào không có đi</span><span>ề</span>u ki<span>ệ</span>n
+                    đi nh<span>ậ</span>n hoa thì có th<span>ể</span> yêu c<span>ầ</span>u giao hàng t<span>ậ</span><span>n nhà, hoa tươi Đà L</span><span>ạ</span>t
+                    DLF s<span>ẽ</span> tính thêm phí v<span>ậ</span>n chuy<span>ể</span>n tùy vào kho<span>ả</span>ng cách
+                    đ<span>ế</span>n đ<span>ị</span>a đi<span>ể</span>m giao hàng cho quý khách.</p>
+                <p>Đ<span>ị</span>a đi<span>ể</span><span>m giao hoa ngày thư</span><span>ờ</span>ng: Đ<span>ầ</span><span>u đư</span><span>ờ</span>ng
+                    H<span>ồ</span> Th<span>ị</span> K<span>ỷ</span> giao Lý Thái T<span>ổ</span> ( ch<span>ỗ</span><span> nhà văn hóa phư</span><span>ờ</span>ng),
+                    Q.10, Tp. H<span>ồ</span> Chí Minh</p>
+                <p>Đ<span>ị</span>a đi<span>ể</span>m giao hoa d<span>ị</span>p l<span>ễ</span> 14/2, 8/3, 20/10, 20/11: 1025
+                    CMT8, P, Q.Tân Bình, TP.H<span>ồ</span> Chí Minh (h<span>ẻ</span>m 1025 CMT8 ch<span>ạ</span>y th<span>ẳ</span>ng
+                    vào cu<span>ố</span><span>i đư</span><span>ờ</span>ng, r<span>ẻ</span> ph<span>ả</span><span>i 20m là đ</span><span>ế</span><span>n), café Vư</span><span>ờ</span><span>n Xanh, đư</span><span>ờ</span>ng
+                    s<span>ố</span> 5, P. Linh Chi<span>ể</span>u, Q. Th<span>ủ</span> Đ<span>ứ</span>c, TP. H<span>ồ</span>                    Chí Minh</p>
+                <p>Đ<span>ố</span>i v<span>ớ</span>i quý khách hàng t<span>ạ</span>i TP. C<span>ầ</span><span>n Thơ: Qu</span>ý
+                    khách nh<span>ậ</span>n hàng tr<span>ự</span>c ti<span>ế</span>p t<span>ạ</span>i đ<span>ị</span>a ch<span>ỉ</span>                    giao hàng. 51/51H1 H<span>ẻ</span>m 51B, 3/2, Q. Ninh Ki<span>ề</span>u, TP. C<span>ầ</span><span>n Thơ</span></p>
+                <p>Đ<span>ố</span>i v<span>ớ</span>i quý khách hàng <span>ở</span> nh<span>ữ</span>ng t<span>ỉ</span>nh thành
+                    khác:</p>
+                <p>&nbsp;<span>- Sau khi th</span><span>ố</span><span>ng nh</span><span>ấ</span><span>t giá c</span><span>ả</span><span>, s</span><span>ố</span><span> lư</span><span>ợ</span><span>ng, ngày giao hàng -&gt; khách hàng s</span><span>ẽ</span><span> chuy</span><span>ể</span><span>n 100% s</span><span>ố</span><span> ti</span><span>ề</span><span>n vào 1 trong các ngân hàng t</span><span>ạ</span><span>i ph</span><span>ầ</span><span>n hướng dẫn thanh toán&nbsp;</span><span>. Bên mua ch</span><span>ị</span><span>u hoàn toàn chi phí v</span><span>ậ</span><span>n chuy</span><span>ể</span><span>n đi t</span><span>ỉ</span><span>nh (ti</span><span>ề</span><span>n tàu xe, chuy</span><span>ể</span><span>n máy bay</span><span>). Chi phí đóng gói và chuy</span><span>ể</span><span>n ra tàu xe do bên bán ch</span><span>ị</span><span>u (n</span><span>ế</span><span>u đư</span><span>ờ</span><span>ng xa thì + thêm 1 ít ti</span><span>ề</span><span>n xăng).</span></p>
+                <p><span>- Sau khi nh</span><span>ậ</span><span>n ti</span><span>ề</span><span>n thì đ</span><span>ế</span><span>n đúng h</span><span>ẹ</span><span>n giao hàng bên bán s</span><span>ẽ</span><span> chuy</span><span>ể</span><span>n hàng. N</span><span>ế</span><span>u có tr</span><span>ụ</span><span>c tr</span><span>ặ</span><span>c thì s</span><span>ẽ</span><span> th</span><span>ố</span><span>ng nh</span><span>ấ</span><span>t qua đi</span><span>ệ</span><span>n tho</span><span>ạ</span><span>i v</span><span>ớ</span><span>i quý khách tr</span><span>ư</span><span>ớ</span><span>c.</span></p>
+                <p><span>- N</span><span>ế</span><span>u Quý khách </span><span>ở</span><span> các t</span><span>ỉ</span><span>nh mi</span><span>ề</span><span>n Tây (đ</span><span>ồ</span><span>ng b</span><span>ằ</span><span>ng sông C</span><span>ử</span><span>u Long) thì s</span><span>ẽ</span><span> g</span><span>ở</span><span>i qua nhà xe Phương Trang, C</span><span>ổ</span><span> ph</span><span>ầ</span><span>n Sài Gòn, Tô Châu,… N</span><span>ế</span><span>u </span><span>ở</span><span> các huy</span><span>ệ</span><span>n thì th</span><span>ư</span><span>ờ</span><span>ng có nhà xe riêng v</span><span>ề</span><span>.. Sau m</span><span>ộ</span><span>t</span><span> đêm là nh</span><span>ậ</span><span>n hàng.</span></p>
+                <p><span>- N</span><span>ế</span><span>u Quý khách </span><span>ở</span><span> các t</span><span>ỉ</span><span>nh mi</span><span>ề</span><span>n Đông (Phan Thi</span><span>ế</span><span>t, Nha Trang, Đ</span><span>ồ</span><span>ng Nai,…) thì s</span><span>ẽ</span><span> g</span><span>ở</span><span>i qua nhà xe Phương Trang, Kum</span><span>ho,… Sau m</span><span>ộ</span><span>t</span><span> đêm là nh</span><span>ậ</span><span>n hàng.</span></p>
+                <p><span>- N</span><span>ế</span><span>u là các t</span><span>ỉ</span><span>nh mi</span><span>ề</span><span>n Trung (Đà N</span><span>ẵ</span><span>ng, Qui n</span><span>hơn,</span><span> Phú Yên,…) thì s</span><span>ẽ</span><span> g</span><span>ở</span><span>i b</span><span>ằ</span><span>ng nhà xe (Phương Trang, Cúc tư, Chín Nghĩa,…), </span><span>sau m</span><span>ộ</span><span>t</span><span> đêm là nh</span><span>ậ</span><span>n hàng.</span></p>
+                <p><span>- N</span><span>ế</span><span>u là các t</span><span>ỉ</span><span>nh Tây Nguyên (Daklak, DakNong, Gia Lai, Kon Tum) thì s</span><span>ẽ</span><span> g</span><span>ử</span><span>i b</span><span>ằ</span><span>ng nhà xe (Quy</span><span>ế</span><span>t Th</span><span>ắ</span><span>ng, Thu Đ</span><span>ứ</span><span>c, Vi</span><span>ệ</span><span>t Tân,…), sau m</span><span>ộ</span><span>t</span><span> đêm là nh</span><span>ậ</span><span>n hàng.</span></p>
+                <p>&nbsp;</p>
+            </div>
+        </uib-tab>
+        <uib-tab index="2" heading="Hướng dẫn thanh toán">
+            </br>
+            <div class="news-detail">
+                </br>
+                <p><strong>Hướng dẫn thanh toán</strong></p>
+                <p>B<span>ạ</span>n đ<span>ế</span>n b<span>ấ</span>t kỳ<span> ngân hàng nào đ</span><span>ể</span> chuy<span>ể</span>n
+                    ti
+                    <span>ề</span><span>n theo thông tin bên dư</span><span>ớ</span><span>i. Lưu </span>ý: N<span>ế</span>u
+                    g
+                    <span>ử</span>i cùng n<span>ộ</span>i m<span>ạ</span>ng ngân hàng thì th<span>ờ</span>i gian chuy<span>ể</span>n
+                    ti
+                    <span>ề</span>n s<span>ẽ</span><span> nhanh hơn. VD: B</span><span>ạ</span>n vào ngân hàng nông nghi<span>ệ</span>p
+                    đ
+                    <span>ể</span> g<span>ử</span>i ti<span>ề</span>n vào tài kho<span>ả</span>n ngân hàng nông nghi<span>ệ</span>p.</p>
+                <p>Thông tin tài kho<span>ả</span>n:</p>
+                <p><strong>Tài kho</strong><strong><span>ả</span>n ngân hàng agribank:</strong></p>
+                <p>Tên ngân hàng: Ngân hàng nông nghi<span>ệ</span>p và phát tri<span>ể</span>n nông thôn Vi<span>ệ</span>t
+                    Nam – Chi nhánh 9 Tp.H<span>ồ</span> Chí Minh</p>
+                <p>Ch<span>ủ</span> tài kho<span>ả</span>n: Nguy<span>ễ</span>n Vi<span>ế</span>t Dũng</p>
+                <p>S<span>ố</span> tài kho<span>ả</span>n: 6300205562620</p>
+                <p><strong>Tài kho</strong><strong><span>ả</span>n ngân hàng Đông Á:</strong></p>
+                <p>Tên ngân hàng: Ngân hàng TMCP Đông Á – Chi nhánh daklak</p>
+                <p>Ch<span>ủ</span> tài kho<span>ả</span>n: Nguy<span>ễ</span>n Vi<span>ế</span>t Dũng</p>
+                <p>S<span>ố</span> tài kho<span>ả</span>n: 0104059858</p>
+                <p><strong>Tài kho</strong><strong><span>ả</span>n ngân hàng Sacombank:</strong></p>
+                <p>Tên ngân hang: Ngân hàng TMCP Sài Gòn Th<span>ương Tín – Chi nhánh Tp. H</span><span>ồ</span> Chí Minh</p>
+                <p>Ch<span>ủ</span> tài kho<span>ả</span>n: Nguy<span>ễ</span>n Vi<span>ế</span>t Dũng</p>
+                <p>S<span>ố</span> tài kho<span>ả</span>n: 060049246075</p>
+                <!--<p><img alt="" height="144" src="/uploads/post/logo-vietcombank-moi-nhat.jpg" width="316">&nbsp;<img alt=""-->
+                height="142" src="/uploads/post/TCBANK1375326066.jpg" width="276"></p>
+                <p><span>Sau khi Quý khách đã chuyển tiền vào tài khoản, Quý khách vui lòng thông báo cho Hoa tươi đà lạt DLF bằng cách nhắn tin, gửi email hoặc báo qua zalo, facebook. Tiền gửi đến sẽ báo qua điện thoại mình sau 15’ nếu các bạn gửi cùng nội mạng ngân hàng, mất khoảng vài giờ nếu các bạn gửi khác ngân hàng.</span></p>
+                <p><span>Hoa tươi đà l</span><span>ạ</span>t s<span>ẽ</span> thông báo ngay cho b<span>ạ</span>n khi chúng tôi
+                    nh
+                    <span>ậ</span><span>n đư</span><span>ợ</span>c ti<span>ề</span>n, sau khi g<span>ử</span>i hàng ti<span>ề</span>n
+                    th
+                    <span>ừ</span>a c<span>ủ</span>a b<span>ạ</span>n (n<span>ế</span>u có) s<span>ẽ</span><span> đư</span><span>ợ</span>c
+                    chuy
+                    <span>ể</span>n tr<span>ả</span> l<span>ạ</span>i trong vòng 3 ngày làm vi<span>ệ</span>c.</p>
+                <p>Đ<span>ố</span>i v<span>ớ</span>i khách hàng g<span>ử</span>i ti<span>ề</span>n đ<span>ặ</span>t c<span>ọ</span>c
+                    hoa chúng tôi s<span>ẽ</span> báo có nh<span>ậ</span>n ti<span>ề</span>n và xác nh<span>ậ</span>n thông
+                    tin đã nh<span>ậ</span>n ti<span>ề</span>n đ<span>ặ</span>t c<span>ọ</span>c c<span>ủ</span>a b<span>ạ</span>n
+                    qua email ho<span>ặ</span>c tin nh<span>ắ</span>n đi<span>ệ</span>n tho<span>ạ</span>i.</p>
+            </div>
+        </uib-tab>
+    </uib-tabset>
+    </div
