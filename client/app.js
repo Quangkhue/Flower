@@ -29,6 +29,16 @@ app.config(function($stateProvider, $urlRouterProvider) {
             url: "/product/:catId",
             controller: "ProductCtrl"
         })
+        .state('app.product-detail', {
+            templateUrl: "/modules/product/views/detail.html",
+            url: "/product/detail/:id",
+            controller: "ProductDetailCtrl",
+            resolve: {
+                prod: function($stateParams, ProductSvc){
+                    return ProductSvc.getById($stateParams.id);
+                }
+            }
+        })
         .state('app.guide', {
             templateUrl: "modules/guide/views/guide.html",
             url: "/guide"
