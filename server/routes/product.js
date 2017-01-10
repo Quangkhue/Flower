@@ -8,7 +8,9 @@ router.delete('/:id', auth, ProductCtrl.deleteProduct);
 router.post('/', auth, ProductCtrl.createProduct);
 router.post('/categories', ProductCtrl.getProductByCats);
 router.get('/count', ProductCtrl.getCount);
+router.get('/top', ProductCtrl.getTopSellProduct);
 router.get('/', ProductCtrl.getProducts);
 router.get('/:id', ProductCtrl.getProductById);
+
 
 module.exports = router;

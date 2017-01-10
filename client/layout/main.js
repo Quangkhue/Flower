@@ -1,5 +1,5 @@
 'use strict';
-app.controller('MainCtrl', function($scope, $rootScope, $state, CategorySvc){
+app.controller('MainCtrl', function($scope, $rootScope, $state, CategorySvc, ProductSvc){
     console.log("Main ctrl!");
 
     $scope.$state = $state;
@@ -16,4 +16,8 @@ app.controller('MainCtrl', function($scope, $rootScope, $state, CategorySvc){
     }
 
     $scope.getCategories();
+    ProductSvc.getTopProds().then(function(res){
+        console.log('topprods: ', res);
+        $rootScope.topProds = angular.copy(res);
+    })
 });

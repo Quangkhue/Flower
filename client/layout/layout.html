@@ -61,14 +61,14 @@
 <p><a href="#" role="button" class="btn btn-primary">Learn more</a></p>
 <h3><span>Danh mục sản phẩm</span></h3>
 <ul>
-  <li><a href="">Hoa Ly</a></li>
-  <li><a href="">Hoa Hồng</a></li>
+  <li ng-repeat="p in topProds"><a href="" ng-click="goToPage('app.product-detail', {id: p.id})">{{p.name}}</a></li>
+  <!-- <li><a href="">Hoa Hồng</a></li>
   <li><a href="">Hoa Cúc</a></li>
   <li><a href="">Hoa Đồng Tiền</a></li>
   <li><a href="">Hoa Cẩm Chướng</a></li>
   <li><a href="">Hoa Salem</a></li>
   <li><a href="">Hoa Lan</a></li>
-  <li><a href="">Hoa Huệ Trắng</a></li>
+  <li><a href="">Hoa Huệ Trắng</a></li> -->
 </ul>
 </aside>
 </div>
