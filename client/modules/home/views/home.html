@@ -81,7 +81,7 @@
     <div class="row" style="padding-top: 0px;">
       <div ng-repeat="cat in categories" class="col-md-4">
           <img ng-src="{{cat.imgUrl}}" alt="image" class="img-responsive img-rounded">
-        <h3><a href="#" ng-click="goTopage('app.product', {catId: cat.id})">{{cat.name}}</a></h3>
+        <h3><a href="#" ng-click="goToPage('app.product', {catId: cat.id})">{{cat.name}}</a></h3>
         <!-- <p class="small-paragraph" style="color: #0de84b;">Hoa ly cắt cành Đà Lạt</p> -->
         <p>{{cat.description}}</p>
         <p><button ng-click="goToPage('app.product', {catId: cat.id})" class="btn btn-info">Xem</button></p>

@@ -76,3 +76,11 @@ module.exports.getCount = function(req, res, next){
         APIResHandler.errorHandler(res, error);
     });
 }
+
+module.exports.getTopSellProduct = function(req, res, next){
+    Product.find({}, {}, {limit: 4, sort: {createdAt: -1}}).exec().then(function(result){
+        APIResHandler.successHandler(res, result);
+    }, function(error){
+        APIResHandler.errorHandler(res, error);
+    });
+}

@@ -73,4 +73,21 @@ app.service("ProductSvc", function($rootScope, Product, $q, ConnectionSvc, Alert
 
         return dfd.promise;
     }
+
+    this.getTopProds = function(){
+        var dfd = $q.defer();
+        ConnectionSvc.get(API_URL.PRODUCT.TOP_PRODUCTS).then(function(res){
+            var result = [];
+            angular.forEach(res, function(prod){
+                var p = new Product();
+                p.parse(prod);
+                result.push(p);
+            })
+            dfd.resolve(result);
+        }, function(error){
+            dfd.reject(error);
+        })
+
+        return dfd.promise;
+    }
 });

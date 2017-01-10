@@ -10,6 +10,10 @@ app.controller("ProductCtrl", function($scope, $rootScope, ProductSvc, $statePar
         return ProductSvc.count();
     }
 
+    $scope.goToDetail = function(prodId){
+        $scope.goToPage('app.product-detail', {id: prodId});
+    }
+
     $scope.getProductsByPage = function(page){
         ProductSvc.getProductByCats([$scope.catId], page).then(function(result){
             $scope.products = angular.copy(result);
